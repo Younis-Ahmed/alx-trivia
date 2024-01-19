@@ -32,3 +32,16 @@ async function questionDisplay(question: string, mutlipleAnswers: string[], corr
         console.log(color.red('Incorrect!'));
     }
 }
+
+class Question {
+    question: string;
+    answersArray: string[];
+    correctAnswerIndex: number;
+
+    constructor(question: string, answersArray: string[], correctAnswerIndex: number) {
+        this.question = question;
+        this.answersArray = answersArray;
+        this.correctAnswerIndex = correctAnswerIndex;
+    }
+}
+
