@@ -1,5 +1,5 @@
-{
-    "1":
+
+[
         {
             "question": "What is the common extension for a C header file?",
             "language": "C",
@@ -11,7 +11,7 @@
             ],
             "correct": 1
         },
-    "2":
+
         {
             "question": "Which command can be used to compile a C source file?",
             "language": "C",
@@ -23,7 +23,7 @@
             ],
             "correct": 0
         },
-    "3":
+
         {
             "question": "Which of the following are both valid comment syntaxes in ANSI C, and Betty-compliant?",
             "language": "C",
@@ -35,7 +35,7 @@
             ],
             "correct": 0
         },
-    "4":
+
         {
             "question": "Which of the following is a valid function prototype in ANSI C?",
             "language": "C",
@@ -47,7 +47,7 @@
             ],
             "correct": 0
         },
-    "5":
+
         {
             "question": "What are the different steps to form an executable file from C source code?",
             "language": "C",
@@ -60,16 +60,14 @@
             ],
             "correct": 4
         },
-    "6":
-    {
-        "question": "In which category belongs the C programming language?",
-        "language": "C",
-        "answers": [
-            "Interpreted language",
-            "Compiled language"
-        ],
-        "correct": 1
-    }
 
-        
-}
+        {
+            "question": "In which category belongs the C programming language?",
+            "language": "C",
+            "answers": [
+                "Interpreted language",
+                "Compiled language"
+            ],
+            "correct": 1
+        }
+    ]
