@@ -1,28 +1,13 @@
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import Playwright
 
-def login(email, password):
-    with sync_playwright() as playwright:
-        browser = playwright.chromium.launch()
-        context = browser.new_context()
-        page = context.new_page()
 
-        page.goto("https://intranet.alxswe.com/")
-
-        # Fill in email and password fields
-        page.fill("#user_email", email)
-        page.fill("#user_password", password)
-
-        # Click on the login button
-        page.click("#user_remember_me")
-        page.click("#actions > input[type=submit]")
-
-        # Wait for the login process to complete
-        page.wait_for_load_state("networkidle")
-
-        # Perform any additional actions after login
-        
-        # Close the browser
-        browser.close()
-
-# Usage example
-login("your_email@example.com", "your_password")
+def run(playwright: Playwright) -> None:
+    browser = playwright.chromium.launch(headless=False)
+    context = browser.new_context()
+    page = context.new_page()
+    page.goto("https://intranet.alxswe.com/auth/sign_in")
+    page.get_by_label("Email").fill("jonasahmed19@hotmail.com")
+    page.get_by_label("Password").click()
+    page.get_by_label("Password").fill("jONASAHMED19")
+    page.get_by_label("Remember me").check()
+    page.get_by_role("button", name="Log in").click()
