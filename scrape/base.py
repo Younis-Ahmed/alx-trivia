@@ -24,7 +24,7 @@ def write_to_file(data: str) -> None:
             if new_data in file_data:
                 print("Data already exists in file.")
                 return
-            file_data.append(new_data)  # Append new data
+            file_data.extend(new_data)  # Append new data
             f.seek(0)  # Move file pointer to the beginning
             f.truncate()  # Clear the file
             # Write the updated data back to the file
@@ -72,4 +72,6 @@ def run(playwright: Playwright, url: str, lang_tag: str) -> None:
 if __name__ == "__main__":
     with sync_playwright() as playwright:
         # run(playwright, "https://intranet.alxswe.com/projects/100021", "Vi")
-        run(playwright, "https://intranet.alxswe.com/projects/1106", "Git")
+        # run(playwright, "https://intranet.alxswe.com/projects/1106", "Git")
+        # run(playwright, "https://intranet.alxswe.com/projects/1103", "Shell")
+        run(playwright, "https://intranet.alxswe.com/projects/1100", "Shell")
