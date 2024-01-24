@@ -3,17 +3,29 @@ import { setTimeout } from 'node:timers/promises';
 import questions from './questions.json';
 import color from 'picocolors';
 
-let totalQuestions = 5;
-let correctAnswers = 0;
+let totalQuestions: number = 5;
+let correctAnswers: number = 0;
 
-async function questionDisplay(question: string, mutlipleAnswers: string[], correctAnswerIdx: number) : Promise<void> {
-    const options: { value: string, label: string }[] = [];
+interface Option {
+    value: string;
+    label: string;
+}
 
-    mutlipleAnswers.forEach((answer) => {
+interface Question {
+    question: string;
+    answersArray: string[];
+    correctAnswer: string;
+    language: string;
+}
+
+async function questionDisplay(question: string, mutlipleAnswers: string[], correctAnswer: string, language: string) : Promise<void> {
+    const options: Option[] = [];
+
+    mutlipleAnswers.forEach((answer: string) => {
         options.push({ value: answer, label: answer });
     });
     
-    const answer = await clack.select({
+    const answer: string = await clack.select({
         message: question,
         initialValue: '1',
         options: options,
@@ -21,63 +33,66 @@ async function questionDisplay(question: string, mutlipleAnswers: string[], corr
 
     const spinner = clack.spinner();
     spinner.start();
-    await setTimeout(1000);
+    await setTimeout(1500);
     spinner.stop();
     
-    if (answer === mutlipleAnswers[correctAnswerIdx]) {
+    if (answer === correctAnswer) {
         console.log(color.green('Correct!'));
+        if (correctAnswers % 10 === 0) {
+            console.log(color.green(`${correctAnswer} hits streak, Keep going! 🤩`));
+        }
         correctAnswers++;
     } else {
-        console.log(color.red('Incorrect!'));
+        console.log(color.red('Incorrect!, Game over!'));
+        console.log(color.green(`You answered ${correctAnswers} questions correctly!`));
     }
 }
 
-class Question {
+class QuestionClass {
     question: string;
     answersArray: string[];
-    correctAnswerIndex: number;
+    correctAnswer: string;
+    language: string;
 
-    constructor(question: string, answersArray: string[], correctAnswerIndex: number) {
+    constructor(question: string, answersArray: string[], correctAnswer: string, language: string) {
         this.question = question;
         this.answersArray = answersArray;
-        this.correctAnswerIndex = correctAnswerIndex;
+        this.correctAnswer = correctAnswer;
+        this.language = language;
     }
 }
 
 async function main() {
     console.clear();
 
-    await setTimeout(1000);
-
-    clack.intro(`${color.bgBlack(color.magenta('Welcome to the Alx trivia!'))}\n\n${color.bgBlack(color.yellow(`You will be asked random Alx questions, You need to answer ${totalQuestions} consecutive to Wins!`))}\n\n${color.bgBlack(color.green('Good luck!'))}`);
+    clack.intro(`${color.magenta('Welcome to the Alx trivia!')}\n\n${color.magenta(`You will be asked random Alx questions, You need to answer ${totalQuestions} consecutive to Wins!`)}\n\n${color.green('Good luck!')}`);
 
     await setTimeout(2000);
 
-    const questionsArray: Question[] = [];
+    const questionsArray: QuestionClass[] = [];
 
-    questions.forEach((question) => {
-        questionsArray.push(new Question(question.question, question.answers, question.correct));
+    questions.forEach((question: Question) => {
+        questionsArray.push(new QuestionClass(question.question, question.answersArray, question.correctAnswer, question.language));
     });
 
-    const readyToPlay = await clack.select({
-		message: "No cheating. Results at the end. Ready to play?",
-		initialValue: "Yes",
-		options: [
-			{value: "Yes", label: "Yes"},
-			{value: "No", label: "No"}],
-	})
+    const readyToPlay: string = await clack.select({
+        message: "No cheating. Results at the end. Ready to play?",
+        initialValue: "Yes",
+        options: [
+            {value: "Yes", label: "Yes"},
+            {value: "No", label: "No"}],
+    })
 
     if (readyToPlay === 'No') {
-        console.log(color.bgBlack(color.red('Bye!')));
+        console.log(color.red('Bye! ✌'));
         process.exit(0);
     }
 
-
-
     while (totalQuestions) {
-        const randomQuestion = Math.floor(Math.random() * questionsArray.length);
-        const question = questionsArray[randomQuestion];
-        await questionDisplay(question.question, question.answersArray, question.correctAnswerIndex);
+        const randomQuestion: number = Math.floor(Math.random() * questionsArray.length);
+        const question: QuestionClass = questionsArray[randomQuestion];
+        await questionDisplay(question.question, question.answersArray, question.correctAnswer, question.language);
+        questionsArray.splice(randomQuestion, 1);
         totalQuestions--;
     }
 
