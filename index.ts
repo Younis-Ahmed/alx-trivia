@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import * as clack from '@clack/prompts';
 import { setTimeout } from 'node:timers/promises';
 import questions from './questions.json';
