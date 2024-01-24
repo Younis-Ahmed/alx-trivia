@@ -1,4 +1,4 @@
-from playwright.sync_api import Playwright, sync_playwright, expect
+from playwright.sync_api import Playwright, sync_playwright
 from dotenv import load_dotenv
 import os
 from bs4 import BeautifulSoup
@@ -8,11 +8,34 @@ load_dotenv()
 
 
 def write_to_file(data: str) -> None:
-    with open("../questions.json", "w") as f:
-        f.append(data)
+    if not data:
+        print("No data to write.")
+        return
+
+    try:
+        new_data = json.loads(data)  # Validate JSON
+    except json.JSONDecodeError:
+        print("Data is not valid JSON.")
+        return
+
+    try:
+        with open("../questions.json", "r+") as f:
+            file_data = json.load(f)  # Load existing data
+            if new_data in file_data:
+                print("Data already exists in file.")
+                return
+            file_data.append(new_data)  # Append new data
+            f.seek(0)  # Move file pointer to the beginning
+            f.truncate()  # Clear the file
+            # Write the updated data back to the file
+            json.dump(file_data, f, indent=4)
+    except json.JSONDecodeError as e:
+        print(f"Error in JSON file: {e.doc[e.pos:e.pos+10]}...")
 
 
 def run(playwright: Playwright, url: str, lang_tag: str) -> None:
+    questions = []
+    data = {}
     browser = playwright.chromium.launch(headless=True)
     context = browser.new_context()
     page = context.new_page()
@@ -28,11 +51,13 @@ def run(playwright: Playwright, url: str, lang_tag: str) -> None:
     html = page.inner_html(".quiz_questions_show_container")
     soup = BeautifulSoup(html, "html.parser")
     rel = soup.find_all("div", class_="clearfix")
-    questions = []
-    data = {}
     for i in rel:
-        data = {"question": i.find("p").text, "answers": [
-        ], "language": lang_tag, "correct": None}
+        data = {
+            "question": i.find("p").text,
+            "language": lang_tag,
+            "answers": [],
+            "correct": None
+        }
         for j in i.find_all("li"):
             data["answers"].append(j.text.strip())
             input_element = j.find("input")
@@ -46,4 +71,5 @@ def run(playwright: Playwright, url: str, lang_tag: str) -> None:
 
 if __name__ == "__main__":
     with sync_playwright() as playwright:
-        run(playwright, "https://intranet.alxswe.com/projects/100021", "Vi")
+        # run(playwright, "https://intranet.alxswe.com/projects/100021", "Vi")
+        run(playwright, "https://intranet.alxswe.com/projects/1106", "Git")

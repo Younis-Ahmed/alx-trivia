@@ -1,73 +1,108 @@
-
 [
-        {
-            "question": "What is the common extension for a C header file?",
-            "language": "C",
-            "answers": [
-                ".header",
-                ".h",
-                ".ch",
-                ".hpp"
-            ],
-            "correct": 1
-        },
-
-        {
-            "question": "Which command can be used to compile a C source file?",
-            "language": "C",
-            "answers": [
-                "gcc",
-                "g++",
-                "cc",
-                "c++"
-            ],
-            "correct": 0
-        },
-
-        {
-            "question": "Which of the following are both valid comment syntaxes in ANSI C, and Betty-compliant?",
-            "language": "C",
-            "answers": [
-                "/* comment */",
-                "// comment",
-                "# comment",
-                "// comment //"
-            ],
-            "correct": 0
-        },
-
-        {
-            "question": "Which of the following is a valid function prototype in ANSI C?",
-            "language": "C",
-            "answers": [
-                "int _putchar(char c);",
-                "int _putchar(char c)",
-                "int _putchar(char c) {",
-                "int _putchar(char c) }"
-            ],
-            "correct": 0
-        },
-
-        {
-            "question": "What are the different steps to form an executable file from C source code?",
-            "language": "C",
-            "answers": [
+    {
+        "question": "What is the common extension for a C header file?",
+        "language": "C",
+        "answers": [
+            ".header",
+            ".h",
+            ".ch",
+            ".hpp"
+        ],
+        "correct": ".h"
+    },
+    {
+        "question": "Which command can be used to compile a C source file?",
+        "language": "C",
+        "answers": [
+            "gcc",
+            "g++",
+            "cc",
+            "c++"
+        ],
+        "correct": "gcc"
+    },
+    {
+        "question": "Which of the following are both valid comment syntaxes in ANSI C, and Betty-compliant?",
+        "language": "C",
+        "answers": [
+            "/* comment */",
+            "// comment",
+            "# comment",
+            "// comment //"
+        ],
+        "correct": "/* comment */"
+    },
+    {
+        "question": "Which of the following is a valid function prototype in ANSI C?",
+        "language": "C",
+        "answers": [
+            "int _putchar(char c);",
+            "int _putchar(char c)",
+            "int _putchar(char c) {",
+            "int _putchar(char c) }"
+        ],
+        "correct": "int _putchar(char c);"
+    },
+    {
+        "question": "What are the different steps to form an executable file from C source code?",
+        "language": "C",
+        "answers": [
             "Interpretation, assembly and compilation",
             "Interpretation, compilation and assembly",
             "Compilation and linking",
             "Preprocessing and compilation",
             "Preprocessing, compilation, assembly, and linking"
-            ],
-            "correct": 4
-        },
-
+        ],
+        "correct": "Preprocessing, compilation, assembly, and linking"
+    },
+    {
+        "question": "In which category belongs the C programming language?",
+        "language": "C",
+        "answers": [
+            "Interpreted language",
+            "Compiled language"
+        ],
+        "correct": "Compiled language"
+    },
+    [
         {
-            "question": "In which category belongs the C programming language?",
-            "language": "C",
+            "question": "How do you quit Vi?",
+            "language": "Vi",
             "answers": [
-                "Interpreted language",
-                "Compiled language"
+                ":q<Return>",
+                "q",
+                "<ESC>"
             ],
-            "correct": 1
+            "correct": ":q<Return>"
+        },
+        {
+            "question": "How do you enter Command Mode in Vi?",
+            "language": "Vi",
+            "answers": [
+                "Ctrl / Command + C",
+                "<Return>",
+                "<ESC>"
+            ],
+            "correct": "<ESC>"
+        },
+        {
+            "question": "Vi is included with almost every Linux distribution.",
+            "language": "Vi",
+            "answers": [
+                "True",
+                "False"
+            ],
+            "correct": "True"
+        },
+        {
+            "question": "How do you enter Insert Mode in Vi?",
+            "language": "Vi",
+            "answers": [
+                "<Insert>",
+                "i",
+                "<Return>"
+            ],
+            "correct": "i"
         }
     ]
+]
