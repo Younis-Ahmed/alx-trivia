@@ -64,45 +64,183 @@
         ],
         "correct": "Compiled language"
     },
-    [
-        {
-            "question": "How do you quit Vi?",
-            "language": "Vi",
-            "answers": [
-                ":q<Return>",
-                "q",
-                "<ESC>"
-            ],
-            "correct": ":q<Return>"
-        },
-        {
-            "question": "How do you enter Command Mode in Vi?",
-            "language": "Vi",
-            "answers": [
-                "Ctrl / Command + C",
-                "<Return>",
-                "<ESC>"
-            ],
-            "correct": "<ESC>"
-        },
-        {
-            "question": "Vi is included with almost every Linux distribution.",
-            "language": "Vi",
-            "answers": [
-                "True",
-                "False"
-            ],
-            "correct": "True"
-        },
-        {
-            "question": "How do you enter Insert Mode in Vi?",
-            "language": "Vi",
-            "answers": [
-                "<Insert>",
-                "i",
-                "<Return>"
-            ],
-            "correct": "i"
-        }
-    ]
+    {
+        "question": "How do you quit Vi?",
+        "language": "Vi",
+        "answers": [
+            ":q<Return>",
+            "q",
+            "<ESC>"
+        ],
+        "correct": ":q<Return>"
+    },
+    {
+        "question": "How do you enter Command Mode in Vi?",
+        "language": "Vi",
+        "answers": [
+            "Ctrl / Command + C",
+            "<Return>",
+            "<ESC>"
+        ],
+        "correct": "<ESC>"
+    },
+    {
+        "question": "Vi is included with almost every Linux distribution.",
+        "language": "Vi",
+        "answers": [
+            "True",
+            "False"
+        ],
+        "correct": "True"
+    },
+    {
+        "question": "How do you enter Insert Mode in Vi?",
+        "language": "Vi",
+        "answers": [
+            "<Insert>",
+            "i",
+            "<Return>"
+        ],
+        "correct": "i"
+    },
+    {
+        "question": "What command can you use to see what changes have been staged, which haven\u2019t, and which files aren\u2019t being tracked by Git?",
+        "language": "Git",
+        "answers": [
+            "git init",
+            "git checkout",
+            "git status"
+        ],
+        "correct": "git status"
+    },
+    {
+        "question": "You have the following files in your project directory:",
+        "language": "Git",
+        "answers": [
+            "git add .",
+            "git add 0-test",
+            "git add -N 0-test"
+        ],
+        "correct": "git add 0-test"
+    },
+    {
+        "question": "Which command should you use to display the content of a file?",
+        "language": "Shell",
+        "answers": [
+            "cd",
+            "pwd",
+            "touch",
+            "ls",
+            "less"
+        ],
+        "correct": "less"
+    },
+    {
+        "question": "Which command should you use to create a directory?",
+        "language": "Shell",
+        "answers": [
+            "mv",
+            "rmdir",
+            "mkdir",
+            "cp",
+            "rm"
+        ],
+        "correct": "mkdir"
+    },
+    {
+        "question": "Which command should you use to list all files of your current directory?",
+        "language": "Shell",
+        "answers": [
+            "cd",
+            "pwd",
+            "touch",
+            "less",
+            "ls"
+        ],
+        "correct": "ls"
+    },
+    {
+        "question": "Which command should you use to delete a directory?",
+        "language": "Shell",
+        "answers": [
+            "rm",
+            "cp",
+            "rmdir",
+            "mkdir",
+            "mv"
+        ],
+        "correct": "rmdir"
+    },
+    {
+        "question": "Which command should you use to delete a file (or directory if additional argument)?",
+        "language": "Shell",
+        "answers": [
+            "rm",
+            "rmdir",
+            "cp",
+            "mkdir",
+            "mv"
+        ],
+        "correct": "rm"
+    },
+    {
+        "question": "Which command should you use to display the current path of your current directory?",
+        "language": "Shell",
+        "answers": [
+            "ls",
+            "pwd",
+            "less",
+            "touch",
+            "cd"
+        ],
+        "correct": "pwd"
+    },
+    {
+        "question": "Which command should you use to change directory?",
+        "language": "Shell",
+        "answers": [
+            "pwd",
+            "touch",
+            "cd",
+            "less",
+            "ls"
+        ],
+        "correct": "cd"
+    },
+    {
+        "question": "Which command should you use to copy a file (or directory if additional argument)?",
+        "language": "Shell",
+        "answers": [
+            "mv",
+            "mkdir",
+            "rmdir",
+            "cp",
+            "rm"
+        ],
+        "correct": "cp"
+    },
+    {
+        "question": "Which command should you use to rename or move a file (or directory)?",
+        "language": "Shell",
+        "answers": [
+            "rm",
+            "cp",
+            "rmdir",
+            "mkdir",
+            "mv"
+        ],
+        "correct": "mv"
+    },
+    {
+        "question": "Which command should you use to create an empty file?",
+        "language": "Shell",
+        "answers": [
+            "cd",
+            "pwd",
+            "ls",
+            "less",
+            "touch"
+        ],
+        "correct": "touch"
+    }
 ]
