@@ -2,245 +2,245 @@
     {
         "question": "What is the common extension for a C header file?",
         "language": "C",
-        "answers": [
+        "answersArray": [
             ".header",
             ".h",
             ".ch",
             ".hpp"
         ],
-        "correct": ".h"
+        "correctAnswer": ".h"
     },
     {
         "question": "Which command can be used to compile a C source file?",
         "language": "C",
-        "answers": [
+        "answersArray": [
             "gcc",
             "g++",
             "cc",
             "c++"
         ],
-        "correct": "gcc"
+        "correctAnswer": "gcc"
     },
     {
         "question": "Which of the following are both valid comment syntaxes in ANSI C, and Betty-compliant?",
         "language": "C",
-        "answers": [
+        "answersArray": [
             "/* comment */",
             "// comment",
             "# comment",
             "// comment //"
         ],
-        "correct": "/* comment */"
+        "correctAnswer": "/* comment */"
     },
     {
         "question": "Which of the following is a valid function prototype in ANSI C?",
         "language": "C",
-        "answers": [
+        "answersArray": [
             "int _putchar(char c);",
             "int _putchar(char c)",
             "int _putchar(char c) {",
             "int _putchar(char c) }"
         ],
-        "correct": "int _putchar(char c);"
+        "correctAnswer": "int _putchar(char c);"
     },
     {
         "question": "What are the different steps to form an executable file from C source code?",
         "language": "C",
-        "answers": [
+        "answersArray": [
             "Interpretation, assembly and compilation",
             "Interpretation, compilation and assembly",
             "Compilation and linking",
             "Preprocessing and compilation",
             "Preprocessing, compilation, assembly, and linking"
         ],
-        "correct": "Preprocessing, compilation, assembly, and linking"
+        "correctAnswer": "Preprocessing, compilation, assembly, and linking"
     },
     {
         "question": "In which category belongs the C programming language?",
         "language": "C",
-        "answers": [
+        "answersArray": [
             "Interpreted language",
             "Compiled language"
         ],
-        "correct": "Compiled language"
+        "correctAnswer": "Compiled language"
     },
     {
         "question": "How do you quit Vi?",
         "language": "Vi",
-        "answers": [
+        "answersArray": [
             ":q<Return>",
             "q",
             "<ESC>"
         ],
-        "correct": ":q<Return>"
+        "correctAnswer": ":q<Return>"
     },
     {
         "question": "How do you enter Command Mode in Vi?",
         "language": "Vi",
-        "answers": [
+        "answersArray": [
             "Ctrl / Command + C",
             "<Return>",
             "<ESC>"
         ],
-        "correct": "<ESC>"
+        "correctAnswer": "<ESC>"
     },
     {
         "question": "Vi is included with almost every Linux distribution.",
         "language": "Vi",
-        "answers": [
+        "answersArray": [
             "True",
             "False"
         ],
-        "correct": "True"
+        "correctAnswer": "True"
     },
     {
         "question": "How do you enter Insert Mode in Vi?",
         "language": "Vi",
-        "answers": [
+        "answersArray": [
             "<Insert>",
             "i",
             "<Return>"
         ],
-        "correct": "i"
+        "correctAnswer": "i"
     },
     {
         "question": "What command can you use to see what changes have been staged, which haven\u2019t, and which files aren\u2019t being tracked by Git?",
         "language": "Git",
-        "answers": [
+        "answersArray": [
             "git init",
             "git checkout",
             "git status"
         ],
-        "correct": "git status"
+        "correctAnswer": "git status"
     },
     {
         "question": "You have the following files in your project directory:",
         "language": "Git",
-        "answers": [
+        "answersArray": [
             "git add .",
             "git add 0-test",
             "git add -N 0-test"
         ],
-        "correct": "git add 0-test"
+        "correctAnswer": "git add 0-test"
     },
     {
         "question": "Which command should you use to display the content of a file?",
         "language": "Shell",
-        "answers": [
+        "answersArray": [
             "cd",
             "pwd",
             "touch",
             "ls",
             "less"
         ],
-        "correct": "less"
+        "correctAnswer": "less"
     },
     {
         "question": "Which command should you use to create a directory?",
         "language": "Shell",
-        "answers": [
+        "answersArray": [
             "mv",
             "rmdir",
             "mkdir",
             "cp",
             "rm"
         ],
-        "correct": "mkdir"
+        "correctAnswer": "mkdir"
     },
     {
         "question": "Which command should you use to list all files of your current directory?",
         "language": "Shell",
-        "answers": [
+        "answersArray": [
             "cd",
             "pwd",
             "touch",
             "less",
             "ls"
         ],
-        "correct": "ls"
+        "correctAnswer": "ls"
     },
     {
         "question": "Which command should you use to delete a directory?",
         "language": "Shell",
-        "answers": [
+        "answersArray": [
             "rm",
             "cp",
             "rmdir",
             "mkdir",
             "mv"
         ],
-        "correct": "rmdir"
+        "correctAnswer": "rmdir"
     },
     {
         "question": "Which command should you use to delete a file (or directory if additional argument)?",
         "language": "Shell",
-        "answers": [
+        "answersArray": [
             "rm",
             "rmdir",
             "cp",
             "mkdir",
             "mv"
         ],
-        "correct": "rm"
+        "correctAnswer": "rm"
     },
     {
         "question": "Which command should you use to display the current path of your current directory?",
         "language": "Shell",
-        "answers": [
+        "answersArray": [
             "ls",
             "pwd",
             "less",
             "touch",
             "cd"
         ],
-        "correct": "pwd"
+        "correctAnswer": "pwd"
     },
     {
         "question": "Which command should you use to change directory?",
         "language": "Shell",
-        "answers": [
+        "answersArray": [
             "pwd",
             "touch",
             "cd",
             "less",
             "ls"
         ],
-        "correct": "cd"
+        "correctAnswer": "cd"
     },
     {
         "question": "Which command should you use to copy a file (or directory if additional argument)?",
         "language": "Shell",
-        "answers": [
+        "answersArray": [
             "mv",
             "mkdir",
             "rmdir",
             "cp",
             "rm"
         ],
-        "correct": "cp"
+        "correctAnswer": "cp"
     },
     {
         "question": "Which command should you use to rename or move a file (or directory)?",
         "language": "Shell",
-        "answers": [
+        "answersArray": [
             "rm",
             "cp",
             "rmdir",
             "mkdir",
             "mv"
         ],
-        "correct": "mv"
+        "correctAnswer": "mv"
     },
     {
         "question": "Which command should you use to create an empty file?",
         "language": "Shell",
-        "answers": [
+        "answersArray": [
             "cd",
             "pwd",
             "ls",
             "less",
             "touch"
         ],
-        "correct": "touch"
+        "correctAnswer": "touch"
     }
 ]
