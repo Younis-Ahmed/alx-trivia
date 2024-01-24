@@ -55,14 +55,14 @@ def run(playwright: Playwright, url: str, lang_tag: str) -> None:
         data = {
             "question": i.find("p").text,
             "language": lang_tag,
-            "answers": [],
-            "correct": None
+            "answersArray": [],
+            "correctAnswer": None
         }
         for j in i.find_all("li"):
-            data["answers"].append(j.text.strip())
+            data["answersArray"].append(j.text.strip())
             input_element = j.find("input")
             if input_element and "checked" in input_element.attrs:
-                data["correct"] = j.text.strip()
+                data["correctAnswer"] = j.text.strip()
         questions.append(data)
     write_to_file(json.dumps(questions))
     context.close()
