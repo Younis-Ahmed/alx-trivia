@@ -1,7 +1,8 @@
-from playwright.sync_api import Playwright, sync_playwright
+from typing import Any, List
+from playwright.sync_api import Playwright, sync_playwright, BrowserContext, Browser, Page
 from dotenv import load_dotenv
 import os
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, ResultSet
 import json
 
 load_dotenv()
@@ -13,14 +14,14 @@ def write_to_file(data: str) -> None:
         return
 
     try:
-        new_data = json.loads(data)  # Validate JSON
+        new_data: List[str] = json.loads(data)  # Validate JSON
     except json.JSONDecodeError:
         print("Data is not valid JSON.")
         return
 
     try:
         with open("../questions.json", "r+") as f:
-            file_data = json.load(f)  # Load existing data
+            file_data: List[str] = json.load(f)  # Load existing data
             if new_data in file_data:
                 print("Data already exists in file.")
                 return
@@ -34,11 +35,11 @@ def write_to_file(data: str) -> None:
 
 
 def run(playwright: Playwright, url: str, lang_tag: str) -> None:
-    questions = []
-    data = {}
-    browser = playwright.chromium.launch(headless=True)
-    context = browser.new_context()
-    page = context.new_page()
+    questions: list = []
+    data: dict = {}
+    browser: Browser = playwright.chromium.launch(headless=True)
+    context: BrowserContext = browser.new_context()
+    page: Page = context.new_page()
     page.goto("https://intranet.alxswe.com/auth/sign_in")
     page.get_by_label("Email").fill(os.getenv("EMAIL"))
     page.get_by_label("Password").click()
@@ -48,19 +49,20 @@ def run(playwright: Playwright, url: str, lang_tag: str) -> None:
     page.goto(url)
     page.mouse.wheel(0, 1000)
     page.get_by_text("(Show quiz)").click()
-    html = page.inner_html(".quiz_questions_show_container")
+    html: str = page.inner_html(".quiz_questions_show_container")
     soup = BeautifulSoup(html, "html.parser")
-    rel = soup.find_all("div", class_="clearfix")
+    rel: ResultSet[Any] = soup.find_all("div", class_="clearfix")
     for i in rel:
         data = {
             "question": i.find("p").text,
             "language": lang_tag,
             "answersArray": [],
-            "correctAnswer": None
+            "correctAnswer": None,
+            "code": i.find("code").text if i.find("pre > code") else None,
         }
         for j in i.find_all("li"):
             data["answersArray"].append(j.text.strip())
-            input_element = j.find("input")
+            input_element: str | None = j.find("input")
             if input_element and "checked" in input_element.attrs:
                 data["correctAnswer"] = j.text.strip()
         questions.append(data)
