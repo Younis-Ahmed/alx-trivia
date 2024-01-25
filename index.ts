@@ -1,6 +1,6 @@
 import * as clack from '@clack/prompts';
 import { setTimeout } from 'node:timers/promises';
-import questions from './questionsTest.json';
+import questions from './questions.json';
 import color from 'picocolors';
 import { Formatter } from 'picocolors/types';
 
