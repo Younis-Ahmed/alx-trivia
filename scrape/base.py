@@ -54,11 +54,11 @@ def run(playwright: Playwright, url: str, lang_tag: str) -> None:
     rel: ResultSet[Any] = soup.find_all("div", class_="clearfix")
     for i in rel:
         data = {
-            "question": i.find_all("p").text,
+            "question": ' '.join(p.text for p in i.select("div > p")) if len(i.select("div > p")) > 1 else i.find("p").text.strip(),
             "language": lang_tag,
             "answersArray": [],
             "correctAnswer": None,
-            "code": i.find("code").text if i.find("pre > code") else None,
+            "code": i.find("pre").text if i.find("pre") else None,
         }
         for j in i.find_all("li"):
             data["answersArray"].append(j.text.strip())
@@ -66,6 +66,7 @@ def run(playwright: Playwright, url: str, lang_tag: str) -> None:
             if input_element and "checked" in input_element.attrs:
                 data["correctAnswer"] = j.text.strip()
         questions.append(data)
+    print(questions[1])
     write_to_file(json.dumps(questions))
     context.close()
     browser.close()
@@ -74,34 +75,34 @@ def run(playwright: Playwright, url: str, lang_tag: str) -> None:
 if __name__ == "__main__":
     with sync_playwright() as playwright:
         # run(playwright, "https://intranet.alxswe.com/projects/100021", "Vi")
-        # run(playwright, "https://intranet.alxswe.com/projects/1106", "Git")
+        run(playwright, "https://intranet.alxswe.com/projects/1106", "Git")
         # run(playwright, "https://intranet.alxswe.com/projects/1103", "Shell")
         # run(playwright, "https://intranet.alxswe.com/projects/1100", "Shell")
-        run(playwright, "https://intranet.alxswe.com/projects/213", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/214", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/215", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/216", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/217", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/218", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/219", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/220", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/221", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/222", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/223", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/224", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/225", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/226", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/227", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/228", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/229", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/230", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/231", "Python")
-        run(playwright, "https://intranet.alxswe.com/projects/232", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/233", "Python")
-        run(playwright, "https://intranet.alxswe.com/projects/234", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/235", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/239", "Python")
-        run(playwright, "https://intranet.alxswe.com/projects/240", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/241", "Python")
-        run(playwright, "https://intranet.alxswe.com/projects/242", "C")
-        run(playwright, "https://intranet.alxswe.com/projects/243", "Python")
+        # run(playwright, "https://intranet.alxswe.com/projects/213", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/214", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/215", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/216", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/217", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/218", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/219", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/220", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/221", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/222", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/223", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/224", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/225", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/226", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/227", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/228", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/229", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/230", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/231", "Python")
+        # run(playwright, "https://intranet.alxswe.com/projects/232", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/233", "Python")
+        # run(playwright, "https://intranet.alxswe.com/projects/234", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/235", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/239", "Python")
+        # run(playwright, "https://intranet.alxswe.com/projects/240", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/241", "Python")
+        # run(playwright, "https://intranet.alxswe.com/projects/242", "C")
+        # run(playwright, "https://intranet.alxswe.com/projects/243", "Python")
