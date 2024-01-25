@@ -1,6 +1,6 @@
 import * as clack from '@clack/prompts';
 import { setTimeout } from 'node:timers/promises';
-import questions from './questions.json';
+import questions from './questionsTest.json';
 import color from 'picocolors';
 import { Formatter } from 'picocolors/types';
 
@@ -35,8 +35,10 @@ async function questionDisplay(question: string, mutlipleAnswers: string[], corr
         "Git" : color.magenta
     };
     
+    question = question + "  " + (languageColor[language] ? languageColor[language]: color.green)(`[${language}]`) + "\n" + (code ? color.cyan(code) : '');
+
     const answer: string | symbol = await clack.select({
-        message: question + "\t" + (languageColor[language] ? languageColor[language]: color.green)(`[${language}]`) + "\n" + (code ? color.cyan(code) : ''),
+        message: question,
         initialValue: '1',
         options: options,
     });
