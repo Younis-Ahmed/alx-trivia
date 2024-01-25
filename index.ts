@@ -35,7 +35,7 @@ async function questionDisplay(question: string, mutlipleAnswers: string[], corr
         "Git" : color.magenta
     };
     
-    question = question + "  " + (languageColor[language] ? languageColor[language]: color.green)(`[${language}]`) + "\n" + (code ? color.cyan(code) : '');
+    question = `${question}  ${(languageColor[language] ? languageColor[language] : color.green)(`[${language}]`)}\n${code ? color.cyan(code) : ''}`;
 
     const answer: string | symbol = await clack.select({
         message: question,
