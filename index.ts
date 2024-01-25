@@ -2,6 +2,7 @@ import * as clack from '@clack/prompts';
 import { setTimeout } from 'node:timers/promises';
 import questions from './questions.json';
 import color from 'picocolors';
+import { Formatter } from 'picocolors/types';
 
 let totalQuestions: number = 5;
 let correctAnswers: number = 0;
@@ -24,9 +25,17 @@ async function questionDisplay(question: string, mutlipleAnswers: string[], corr
     mutlipleAnswers.forEach((answer: string) => {
         options.push({ value: answer, label: answer });
     });
+
+    const languageColor: { [key: string]: Formatter } = {
+        "C" : color.blue, 
+        "Python" : color.green, 
+        "Javascript" : color.yellow, 
+        "Shell" : color.red,
+        "Git" : color.magenta
+    };
     
     const answer: string | symbol = await clack.select({
-        message: question + "\t\t" + color.green(`[${language}]`),
+        message: question + "\t" + languageColor[language](`[${language}]`),
         initialValue: '1',
         options: options,
     });
