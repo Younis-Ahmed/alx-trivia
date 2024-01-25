@@ -26,7 +26,7 @@ async function questionDisplay(question: string, mutlipleAnswers: string[], corr
     });
     
     const answer: string | symbol = await clack.select({
-        message: question,
+        message: question + "\t\t" + color.yellow(`[${language}]`),
         initialValue: '1',
         options: options,
     });
