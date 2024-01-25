@@ -9,7 +9,7 @@ load_dotenv()
 
 
 def write_to_file(data) -> None:
-    filepath = "questionsTest.json"
+    filepath = "questions.json"
     if not data:
         print("No data to write.")
         return
