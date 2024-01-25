@@ -8,7 +8,8 @@ import json
 load_dotenv()
 
 
-def write_to_file(data: str) -> None:
+def write_to_file(data) -> None:
+    filepath = "questionsTest.json"
     if not data:
         print("No data to write.")
         return
@@ -18,20 +19,22 @@ def write_to_file(data: str) -> None:
     except json.JSONDecodeError:
         print("Data is not valid JSON.")
         return
+    
+    if not os.path.exists(filepath):
+        with open(filepath, "w") as file:
+            json.dump(new_data, file, indent=4)
+        return
+
 
     try:
-        with open("../questions.json", "a+") as f:
-            file_data: List[str] = json.load(f)  # Load existing data
-            if new_data in file_data:
-                print("Data already exists in file.")
-                return
-            file_data.extend(new_data)  # Append new data
-            f.seek(0)  # Move file pointer to the beginning
-            f.truncate()  # Clear the file
-            # Write the updated data back to the file
-            json.dump(file_data, f, indent=4)
+        with open(filepath, "r+") as file:
+            old_data: List[str] = json.load(file) # Validate JSON
+            old_data.extend(new_data) # Add new data to old data
+            file.seek(0) # Move cursor to beginning of file
+            json.dump(old_data, file, indent=4) # Write old data + new data to file
+            file.truncate() # Remove old data from file
     except json.JSONDecodeError as e:
-        print(f"Error in JSON file: {e.doc[e.pos:e.pos+10]}...")
+        print(f"Error in JSON file: {e}...")
 
 
 def run(playwright: Playwright, url: str, lang_tag: str) -> None:
@@ -66,7 +69,6 @@ def run(playwright: Playwright, url: str, lang_tag: str) -> None:
             if input_element and "checked" in input_element.attrs:
                 data["correctAnswer"] = j.text.strip()
         questions.append(data)
-    print(questions[1])
     write_to_file(json.dumps(questions))
     context.close()
     browser.close()
