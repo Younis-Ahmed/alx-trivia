@@ -66,7 +66,7 @@ class QuestionClass {
 async function main() {
     console.clear();
 
-    clack.intro(`${color.magenta('Welcome to the Alx trivia!')}\n\n${color.yellow(`You will be asked random Alx questions, You need to answer ${totalQuestions} consecutive to Wins!`)}\n\n${color.green('Good luck!')}`);
+    clack.intro(`${color.cyan('Welcome to the Alx trivia!')}\n\n${color.yellow(`You will be asked random Alx questions, You need to answer ${totalQuestions} consecutive to Wins!`)}\n\n${color.green('Good luck!')}`);
 
     await setTimeout(2000);
 
