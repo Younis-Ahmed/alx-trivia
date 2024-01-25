@@ -4,7 +4,7 @@ import questions from './questions.json';
 import color from 'picocolors';
 import { Formatter } from 'picocolors/types';
 
-let totalQuestions: number = 5;
+
 let correctAnswers: number = 0;
 
 interface Option {
@@ -17,9 +17,10 @@ interface Question {
     answersArray: string[];
     correctAnswer: string;
     language: string;
+    code?: any;
 }
 
-async function questionDisplay(question: string, mutlipleAnswers: string[], correctAnswer: string, language: string) : Promise<void> {
+async function questionDisplay(question: string, mutlipleAnswers: string[], correctAnswer: string, language: string, code?: string) : Promise<void> {
     const options: Option[] = [];
 
     mutlipleAnswers.forEach((answer: string) => {
@@ -35,7 +36,7 @@ async function questionDisplay(question: string, mutlipleAnswers: string[], corr
     };
     
     const answer: string | symbol = await clack.select({
-        message: question + "\t" + languageColor[language](`[${language}]`),
+        message: question + "\t" + (languageColor[language] ? languageColor[language]: color.green)(`[${language}]`) + "\n" + (code ? color.cyan(code) : ''),
         initialValue: '1',
         options: options,
     });
@@ -63,26 +64,28 @@ class QuestionClass {
     answersArray: string[];
     correctAnswer: string;
     language: string;
+    code: any;
 
-    constructor(question: string, answersArray: string[], correctAnswer: string, language: string) {
+    constructor(question: string, answersArray: string[], correctAnswer: string, language: string, code: string) {
         this.question = question;
         this.answersArray = answersArray;
         this.correctAnswer = correctAnswer;
         this.language = language;
+        this.code = code;
     }
 }
 
 async function main() {
     console.clear();
 
-    clack.intro(`${color.bold(color.cyan('Welcome to the Alx trivia!'))}\n\n${color.yellow(`You will be asked random Alx questions, You need to answer ${totalQuestions} consecutive to Wins!`)}\n\n${color.green('Good luck!')}`);
+    clack.intro(`${color.bold(color.cyan('Welcome to the Alx trivia!'))}\n\n${color.yellow(`You will be asked random Alx questions, Answer as much as you can, if answered is incorrect you start over!`)}\n\n${color.green('Good luck!')}`);
 
     await setTimeout(2000);
 
     const questionsArray: QuestionClass[] = [];
 
     questions.forEach((question: Question) => {
-        questionsArray.push(new QuestionClass(question.question, question.answersArray, question.correctAnswer, question.language));
+        questionsArray.push(new QuestionClass(question.question, question.answersArray, question.correctAnswer, question.language, question.code));
     });
 
     const readyToPlay: string | symbol = await clack.select({
@@ -98,12 +101,15 @@ async function main() {
         process.exit(0);
     }
 
-    while (totalQuestions) {
+    while (true) {
         const randomQuestion: number = Math.floor(Math.random() * questionsArray.length);
         const question: QuestionClass = questionsArray[randomQuestion];
         await questionDisplay(question.question, question.answersArray, question.correctAnswer, question.language);
         questionsArray.splice(randomQuestion, 1);
-        totalQuestions--;
+        if (questionsArray.length === 0) {
+            console.log(color.green('You answered all the questions correctly! 🤩'));
+            process.exit(0);
+        }
     }
 
 }
