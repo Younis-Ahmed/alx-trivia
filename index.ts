@@ -25,7 +25,7 @@ async function questionDisplay(question: string, mutlipleAnswers: string[], corr
         options.push({ value: answer, label: answer });
     });
     
-    const answer: string = await clack.select({
+    const answer: string | symbol = await clack.select({
         message: question,
         initialValue: '1',
         options: options,
@@ -38,13 +38,14 @@ async function questionDisplay(question: string, mutlipleAnswers: string[], corr
     
     if (answer === correctAnswer) {
         console.log(color.green('Correct!'));
-        if (correctAnswers % 10 === 0) {
-            console.log(color.green(`${correctAnswer} hits streak, Keep going! 🤩`));
+        if (correctAnswers && correctAnswers % 10 === 0) {
+            console.log(color.green(`${correctAnswers} hits streak, Keep going! 🤩`));
         }
         correctAnswers++;
     } else {
         console.log(color.red('Incorrect!, Game over!'));
         console.log(color.green(`You answered ${correctAnswers} questions correctly!`));
+        process.exit(0);
     }
 }
 
@@ -75,7 +76,7 @@ async function main() {
         questionsArray.push(new QuestionClass(question.question, question.answersArray, question.correctAnswer, question.language));
     });
 
-    const readyToPlay: string = await clack.select({
+    const readyToPlay: string | symbol = await clack.select({
         message: "No cheating. Results at the end. Ready to play?",
         initialValue: "Yes",
         options: [
