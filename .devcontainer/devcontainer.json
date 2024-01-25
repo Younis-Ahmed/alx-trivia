@@ -1,6 +1,7 @@
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
-    "ghcr.io/devcontainers-contrib/features/typescript:2": {}
+    "ghcr.io/devcontainers-contrib/features/typescript:2": {},
+    "ghcr.io/dhoeric/features/act:1": {}
   }
 }
