@@ -20,7 +20,7 @@ def write_to_file(data: str) -> None:
         return
 
     try:
-        with open("../questions.json", "r+") as f:
+        with open("../questions.json", "a+") as f:
             file_data: List[str] = json.load(f)  # Load existing data
             if new_data in file_data:
                 print("Data already exists in file.")
@@ -54,7 +54,7 @@ def run(playwright: Playwright, url: str, lang_tag: str) -> None:
     rel: ResultSet[Any] = soup.find_all("div", class_="clearfix")
     for i in rel:
         data = {
-            "question": i.find("p").text,
+            "question": i.find_all("p").text,
             "language": lang_tag,
             "answersArray": [],
             "correctAnswer": None,
