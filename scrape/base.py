@@ -61,7 +61,7 @@ def run(playwright: Playwright, url: str, lang_tag: str) -> None:
             "language": lang_tag,
             "answersArray": [],
             "correctAnswer": None,
-            "code": i.find("pre").text if i.find("pre") else None,
+            "code": "\n" + i.find("pre").text if i.find("pre") else '',
         }
         for j in i.find_all("li"):
             data["answersArray"].append(j.text.strip())
