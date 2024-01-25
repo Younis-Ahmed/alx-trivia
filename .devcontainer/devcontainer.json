@@ -3,5 +3,25 @@
   "features": {
     "ghcr.io/devcontainers-contrib/features/typescript:2": {},
     "ghcr.io/dhoeric/features/act:1": {}
+  },
+  "postCreateCommand": [
+    "pip install -r requirements.txt",
+    "npm install"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+				"GitHub.copilot-chat",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.vscode-jupyter-cell-tags",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.jupyter-renderers",
+        "ritwickdey.LiveServer",
+        "ms-python.vscode-pylance",
+        "ms-python.python",
+        "github.vscode-github-actions"
+      ]
+    }
   }
 }
