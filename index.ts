@@ -17,10 +17,10 @@ interface Question {
     answersArray: string[];
     correctAnswer: string;
     language: string;
-    code?: any;
+    code: string;
 }
 
-async function questionDisplay(question: string, mutlipleAnswers: string[], correctAnswer: string, language: string, code?: string) : Promise<void> {
+async function questionDisplay(question: string, mutlipleAnswers: string[], correctAnswer: string, language: string, code: string) : Promise<void> {
     const options: Option[] = [];
 
     mutlipleAnswers.forEach((answer: string) => {
@@ -36,7 +36,7 @@ async function questionDisplay(question: string, mutlipleAnswers: string[], corr
     };
     
     question = `${question}  ${(languageColor[language] ? languageColor[language] : color.green)(`[${language}]`)}\n${code ? color.cyan(code) : ''}`;
-
+    console.log(code);
     const answer: string | symbol = await clack.select({
         message: question,
         initialValue: '1',
@@ -55,7 +55,7 @@ async function questionDisplay(question: string, mutlipleAnswers: string[], corr
         }
         correctAnswers++;
     } else {
-        console.log(color.red('Incorrect!, Game over!'));
+        console.log(color.red('❌ Game over!'));
         console.log(color.green(`You answered ${correctAnswers} questions correctly!`));
         process.exit(0);
     }
@@ -66,7 +66,7 @@ class QuestionClass {
     answersArray: string[];
     correctAnswer: string;
     language: string;
-    code: any;
+    code: string;
 
     constructor(question: string, answersArray: string[], correctAnswer: string, language: string, code: string) {
         this.question = question;
@@ -106,7 +106,7 @@ async function main() {
     while (true) {
         const randomQuestion: number = Math.floor(Math.random() * questionsArray.length);
         const question: QuestionClass = questionsArray[randomQuestion];
-        await questionDisplay(question.question, question.answersArray, question.correctAnswer, question.language);
+        await questionDisplay(question.question, question.answersArray, question.correctAnswer, question.language, question.code);
         questionsArray.splice(randomQuestion, 1);
         if (questionsArray.length === 0) {
             console.log(color.green('You answered all the questions correctly! 🤩'));
