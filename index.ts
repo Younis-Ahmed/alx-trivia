@@ -36,7 +36,6 @@ async function questionDisplay(question: string, mutlipleAnswers: string[], corr
     };
     
     question = `${question}  ${(languageColor[language] ? languageColor[language] : color.green)(`[${language}]`)}\n${code ? color.cyan(code) : ''}`;
-    console.log(code);
     const answer: string | symbol = await clack.select({
         message: question,
         initialValue: '1',
@@ -55,8 +54,9 @@ async function questionDisplay(question: string, mutlipleAnswers: string[], corr
         }
         correctAnswers++;
     } else {
-        console.log(color.red('❌ Game over!'));
-        console.log(color.green(`You answered ${correctAnswers} questions correctly!`));
+        console.clear();
+        console.log(color.bold(color.red('❌ Game over!\n')));
+        console.log(color.bold(color.green(`You answered ${correctAnswers} questions correctly!\n\n`)));
         process.exit(0);
     }
 }
@@ -80,7 +80,7 @@ class QuestionClass {
 async function main() {
     console.clear();
 
-    clack.intro(`${color.bold(color.cyan('Welcome to the Alx trivia!'))}\n\n${color.yellow(`You will be asked random Alx questions, Answer as much as you can, if answered is incorrect you start over!`)}\n\n${color.green('Good luck!')}`);
+    clack.intro(`${color.bold(color.cyan('Welcome to the Alx trivia!'))}\n\n${color.yellow(`You will be asked random Alx questions, Answer as much as you can.\nif answered incorrectly you start over!`)}\n\n${color.green('Good luck!')}`);
 
     await setTimeout(2000);
 
@@ -91,7 +91,7 @@ async function main() {
     });
 
     const readyToPlay: string | symbol = await clack.select({
-        message: "No cheating. Results at the end. Ready to play?",
+        message: `No cheating. Results at the end.\n\n${color.underline(color.yellow("[Ctrl + D] Exit [Ctrl + C] Exit + result)"))}\n\nReady to play?`,
         initialValue: "Yes",
         options: [
             {value: "Yes", label: "Yes"},
