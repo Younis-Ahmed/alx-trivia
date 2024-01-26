@@ -1,0 +1,1345 @@
+[
+    {
+        "question": "How do you quit Vi?",
+        "language": "Vi",
+        "answersArray": [
+            ":q<Return>",
+            "q",
+            "<ESC>"
+        ],
+        "correctAnswer": ":q<Return>",
+        "code": ""
+    },
+    {
+        "question": "How do you enter Command Mode in Vi?",
+        "language": "Vi",
+        "answersArray": [
+            "Ctrl / Command + C",
+            "<Return>",
+            "<ESC>"
+        ],
+        "correctAnswer": "<ESC>",
+        "code": ""
+    },
+    {
+        "question": "Vi is included with almost every Linux distribution.",
+        "language": "Vi",
+        "answersArray": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": "True",
+        "code": ""
+    },
+    {
+        "question": "How do you enter Insert Mode in Vi?",
+        "language": "Vi",
+        "answersArray": [
+            "<Insert>",
+            "i",
+            "<Return>"
+        ],
+        "correctAnswer": "i",
+        "code": ""
+    },
+    {
+        "question": "What command can you use to see what changes have been staged, which haven\u2019t, and which files aren\u2019t being tracked by Git?",
+        "language": "Git",
+        "answersArray": [
+            "git init",
+            "git checkout",
+            "git status"
+        ],
+        "correctAnswer": "git status",
+        "code": ""
+    },
+    {
+        "question": "You have the following files in your project directory: You\u2019ve edited 0-test and you want to add it to your GitHub repo. What is the correct command to add only 0-test? You should learn what each of these commands would actually do if you were to execute them!",
+        "language": "Git",
+        "answersArray": [
+            "git add .",
+            "git add 0-test",
+            "git add -N 0-test"
+        ],
+        "correctAnswer": "git add 0-test",
+        "code": "\njulien@ubuntu:/tmp/git_project$ ls\n0-test  0-test~ #0-test# file1  file2\n"
+    },
+    {
+        "question": "Which command should you use to display the content of a file?",
+        "language": "Shell",
+        "answersArray": [
+            "cd",
+            "pwd",
+            "touch",
+            "ls",
+            "less"
+        ],
+        "correctAnswer": "less",
+        "code": ""
+    },
+    {
+        "question": "Which command should you use to create a directory?",
+        "language": "Shell",
+        "answersArray": [
+            "mv",
+            "rmdir",
+            "mkdir",
+            "cp",
+            "rm"
+        ],
+        "correctAnswer": "mkdir",
+        "code": ""
+    },
+    {
+        "question": "Which command should you use to list all files of your current directory?",
+        "language": "Shell",
+        "answersArray": [
+            "cd",
+            "pwd",
+            "touch",
+            "less",
+            "ls"
+        ],
+        "correctAnswer": "ls",
+        "code": ""
+    },
+    {
+        "question": "Which command should you use to delete a directory?",
+        "language": "Shell",
+        "answersArray": [
+            "rm",
+            "cp",
+            "rmdir",
+            "mkdir",
+            "mv"
+        ],
+        "correctAnswer": "rmdir",
+        "code": ""
+    },
+    {
+        "question": "Which command should you use to delete a file (or directory if additional argument)?",
+        "language": "Shell",
+        "answersArray": [
+            "rm",
+            "rmdir",
+            "cp",
+            "mkdir",
+            "mv"
+        ],
+        "correctAnswer": "rm",
+        "code": ""
+    },
+    {
+        "question": "Which command should you use to display the current path of your current directory?",
+        "language": "Shell",
+        "answersArray": [
+            "ls",
+            "pwd",
+            "less",
+            "touch",
+            "cd"
+        ],
+        "correctAnswer": "pwd",
+        "code": ""
+    },
+    {
+        "question": "Which command should you use to change directory?",
+        "language": "Shell",
+        "answersArray": [
+            "pwd",
+            "touch",
+            "cd",
+            "less",
+            "ls"
+        ],
+        "correctAnswer": "cd",
+        "code": ""
+    },
+    {
+        "question": "Which command should you use to copy a file (or directory if additional argument)?",
+        "language": "Shell",
+        "answersArray": [
+            "mv",
+            "mkdir",
+            "rmdir",
+            "cp",
+            "rm"
+        ],
+        "correctAnswer": "cp",
+        "code": ""
+    },
+    {
+        "question": "Which command should you use to rename or move a file (or directory)?",
+        "language": "Shell",
+        "answersArray": [
+            "rm",
+            "cp",
+            "rmdir",
+            "mkdir",
+            "mv"
+        ],
+        "correctAnswer": "mv",
+        "code": ""
+    },
+    {
+        "question": "Which command should you use to create an empty file?",
+        "language": "Shell",
+        "answersArray": [
+            "cd",
+            "pwd",
+            "ls",
+            "less",
+            "touch"
+        ],
+        "correctAnswer": "touch",
+        "code": ""
+    },
+    {
+        "question": "Which command should you use to display the content of a file?",
+        "language": "Shell",
+        "answersArray": [
+            "cd",
+            "pwd",
+            "touch",
+            "ls",
+            "less"
+        ],
+        "correctAnswer": "less",
+        "code": ""
+    },
+    {
+        "question": "Which command should you use to create a directory?",
+        "language": "Shell",
+        "answersArray": [
+            "mv",
+            "rmdir",
+            "mkdir",
+            "cp",
+            "rm"
+        ],
+        "correctAnswer": "mkdir",
+        "code": ""
+    },
+    {
+        "question": "Which command should you use to list all files of your current directory?",
+        "language": "Shell",
+        "answersArray": [
+            "cd",
+            "pwd",
+            "touch",
+            "less",
+            "ls"
+        ],
+        "correctAnswer": "ls",
+        "code": ""
+    },
+    {
+        "question": "Which command should you use to delete a directory?",
+        "language": "Shell",
+        "answersArray": [
+            "rm",
+            "cp",
+            "rmdir",
+            "mkdir",
+            "mv"
+        ],
+        "correctAnswer": "rmdir",
+        "code": ""
+    },
+    {
+        "question": "Which command should you use to delete a file (or directory if additional argument)?",
+        "language": "Shell",
+        "answersArray": [
+            "rm",
+            "rmdir",
+            "cp",
+            "mkdir",
+            "mv"
+        ],
+        "correctAnswer": "rm",
+        "code": ""
+    },
+    {
+        "question": "Which command should you use to display the current path of your current directory?",
+        "language": "Shell",
+        "answersArray": [
+            "ls",
+            "pwd",
+            "less",
+            "touch",
+            "cd"
+        ],
+        "correctAnswer": "pwd",
+        "code": ""
+    },
+    {
+        "question": "Which command should you use to change directory?",
+        "language": "Shell",
+        "answersArray": [
+            "pwd",
+            "touch",
+            "cd",
+            "less",
+            "ls"
+        ],
+        "correctAnswer": "cd",
+        "code": ""
+    },
+    {
+        "question": "Which command should you use to copy a file (or directory if additional argument)?",
+        "language": "Shell",
+        "answersArray": [
+            "mv",
+            "mkdir",
+            "rmdir",
+            "cp",
+            "rm"
+        ],
+        "correctAnswer": "cp",
+        "code": ""
+    },
+    {
+        "question": "Which command should you use to rename or move a file (or directory)?",
+        "language": "Shell",
+        "answersArray": [
+            "rm",
+            "cp",
+            "rmdir",
+            "mkdir",
+            "mv"
+        ],
+        "correctAnswer": "mv",
+        "code": ""
+    },
+    {
+        "question": "Which command should you use to create an empty file?",
+        "language": "Shell",
+        "answersArray": [
+            "cd",
+            "pwd",
+            "ls",
+            "less",
+            "touch"
+        ],
+        "correctAnswer": "touch",
+        "code": ""
+    },
+    {
+        "question": "Which of the following are valid if statements in ANSI C and Betty-compliant? (Considering a and b two variables of type int) Please select all correct answers",
+        "language": "C",
+        "answersArray": [
+            "if {a > b}\n(\n  return {a};\n)",
+            "if a > b\n{\n  return (a);\n}",
+            "if (a > b)\n  return (a);",
+            "if ((((((a > b))))))\n{\n  return (a);\n}",
+            "if (a > b)\n{\n  return (a);\n}"
+        ],
+        "correctAnswer": "if (a > b)\n{\n  return (a);\n}",
+        "code": "\nif {a > b}\n(\n  return {a};\n)\n"
+    },
+    {
+        "question": "What is the size of the char data type?",
+        "language": "C",
+        "answersArray": [
+            "4 bytes",
+            "1 byte",
+            "8 bytes",
+            "2 bytes"
+        ],
+        "correctAnswer": "1 byte",
+        "code": ""
+    },
+    {
+        "question": "What is the size of the unsigned int data type?",
+        "language": "C",
+        "answersArray": [
+            "4 bytes",
+            "1 byte",
+            "8 bytes",
+            "2 bytes"
+        ],
+        "correctAnswer": "4 bytes",
+        "code": ""
+    },
+    {
+        "question": "What is the size of the float data type?",
+        "language": "C",
+        "answersArray": [
+            "4 bytes",
+            "1 byte",
+            "8 bytes",
+            "2 bytes"
+        ],
+        "correctAnswer": "4 bytes",
+        "code": ""
+    },
+    {
+        "question": "Which of the following are valid while or do/while statements in ANSI C and Betty-compliant? (Considering a and b two variables of type int) Please select all correct answers",
+        "language": "C",
+        "answersArray": [
+            "a = 0;\nwhile (a < b)\n(\n    printf(\"%d\\n\", a);\n    a++;\n)",
+            "while (a = 0; a < b; a++)\n{\n    printf(\"%d\\n\", a);\n}",
+            "a = 0;\ndo {\n    printf(\"%d\\n\", a);\n    a++;\n} while (a < b);",
+            "a = 0;\ndo while (a < b)\n{\n    printf(\"%d\\n\", a);\n    a++;\n}",
+            "a = 0;\nwhile (a < b)\n    printf(\"%d\\n\", a++);",
+            "a = 0;\nwhile (a < b)\n{\n    printf(\"%d\\n\", a);\n    a++;\n}"
+        ],
+        "correctAnswer": "a = 0;\nwhile (a < b)\n{\n    printf(\"%d\\n\", a);\n    a++;\n}",
+        "code": "\na = 0;\nwhile (a < b)\n(\n    printf(\"%d\\n\", a);\n    a++;\n)\n"
+    },
+    {
+        "question": "Which of the following are valid for statements in ANSI C and Betty-compliant? (Considering a and b two variables of type int) Please select all correct answers",
+        "language": "C",
+        "answersArray": [
+            "for (int a = 0; a < b; a++)\n{\n    printf(\"%d\\n\", a);\n}",
+            "for (a = 0; a < b; a++)\n{\n    printf(\"%d\\n\", a);\n}",
+            "a = 0;\nfor (; a < b;)\n{\n    printf(\"%d\\n\", a++);\n}",
+            "a = 0;\nfor (a < b;;)\n{\n    printf(\"%d\\n\", a++);\n}",
+            "for (a = 0; a < b; a++)\n    printf(\"%d\\n\", a);"
+        ],
+        "correctAnswer": "for (a = 0; a < b; a++)\n    printf(\"%d\\n\", a);",
+        "code": "\nfor (int a = 0; a < b; a++)\n{\n    printf(\"%d\\n\", a);\n}\n"
+    },
+    {
+        "question": "What is the ASCII value of J?",
+        "language": "C",
+        "answersArray": [
+            "74",
+            "70",
+            "76",
+            "72"
+        ],
+        "correctAnswer": "74",
+        "code": ""
+    },
+    {
+        "question": "What is the result of 12 % 3?",
+        "language": "C",
+        "answersArray": [
+            "2",
+            "0",
+            "3",
+            "1"
+        ],
+        "correctAnswer": "0",
+        "code": ""
+    },
+    {
+        "question": "What is the ASCII value of A?",
+        "language": "C",
+        "answersArray": [
+            "12",
+            "97",
+            "1",
+            "65"
+        ],
+        "correctAnswer": "65",
+        "code": ""
+    },
+    {
+        "question": "What is the result of 12 % 10?",
+        "language": "C",
+        "answersArray": [
+            "2",
+            "0",
+            "3",
+            "1"
+        ],
+        "correctAnswer": "2",
+        "code": ""
+    },
+    {
+        "question": "What is the result of 12 % 2?",
+        "language": "C",
+        "answersArray": [
+            "0",
+            "2",
+            "1"
+        ],
+        "correctAnswer": "0",
+        "code": ""
+    },
+    {
+        "question": "What is the result of 89 % 7?",
+        "language": "C",
+        "answersArray": [
+            "3",
+            "0",
+            "5",
+            "2"
+        ],
+        "correctAnswer": "5",
+        "code": ""
+    },
+    {
+        "question": "Which of these loop statements don\u2019t exist?",
+        "language": "C",
+        "answersArray": [
+            "loop_to",
+            "for",
+            "foreach",
+            "each",
+            "do... while",
+            "while"
+        ],
+        "correctAnswer": "each",
+        "code": ""
+    },
+    {
+        "question": "What is the ASCII value of a?",
+        "language": "C",
+        "answersArray": [
+            "12",
+            "97",
+            "1",
+            "65"
+        ],
+        "correctAnswer": "97",
+        "code": ""
+    },
+    {
+        "question": "What is the ASCII value of -?",
+        "language": "C",
+        "answersArray": [
+            "45",
+            "47",
+            "3"
+        ],
+        "correctAnswer": "45",
+        "code": ""
+    },
+    {
+        "question": "What is the ASCII value of 5?",
+        "language": "C",
+        "answersArray": [
+            "50",
+            "5",
+            "53"
+        ],
+        "correctAnswer": "53",
+        "code": ""
+    },
+    {
+        "question": "What is the ASCII value of 0?",
+        "language": "C",
+        "answersArray": [
+            "79",
+            "48",
+            "0"
+        ],
+        "correctAnswer": "48",
+        "code": ""
+    },
+    {
+        "question": "What is the output of the following piece of code?",
+        "language": "C",
+        "answersArray": [
+            "0011223344",
+            "0112233445",
+            "0123456789"
+        ],
+        "correctAnswer": "0112233445",
+        "code": "\nint i;\n\ni = 0;\nwhile (i < 10)\n{\n    i++;\n    printf(\"%d\", i / 2);\n}\n"
+    },
+    {
+        "question": "What is the return value of the following function?",
+        "language": "C",
+        "answersArray": [
+            "10",
+            "0",
+            "0123456789",
+            "9"
+        ],
+        "correctAnswer": "10",
+        "code": "\nint some_function(void)\n{\n    int i;\n\n    for (i = 0; i < 10; i++)\n    {\n        printf(\"%d\", i);\n    }\n    return(i);\n}\n"
+    },
+    {
+        "question": "What is the output of the following piece of code?",
+        "language": "C",
+        "answersArray": [
+            "0101010101",
+            "1010101010",
+            "0123456789"
+        ],
+        "correctAnswer": "0101010101",
+        "code": "\nint i;\n\ni = 0;\nwhile (i < 10)\n{\n    printf(\"%d\", i % 2);\n    i++;\n}\n"
+    },
+    {
+        "question": "What is the return value of the following function?",
+        "language": "C",
+        "answersArray": [
+            "12",
+            "402",
+            "98"
+        ],
+        "correctAnswer": "98",
+        "code": "\nint some_function(void)\n{\n    printf(\"%d\", 12);\n    return (98);\n}\n"
+    },
+    {
+        "question": "What is the output of the following piece of code?",
+        "language": "C",
+        "answersArray": [
+            "48495051525354555657",
+            "School",
+            "0123456789"
+        ],
+        "correctAnswer": "0123456789",
+        "code": "\nint i;\n\nfor (i = 48; i < 58; i++)\n{\n    printf(\"%c\", i);\n}\n"
+    },
+    {
+        "question": "What is the output of the following piece of code?",
+        "language": "C",
+        "answersArray": [
+            "0123456789",
+            "024681012141618",
+            "2468101214161820"
+        ],
+        "correctAnswer": "024681012141618",
+        "code": "\nint i;\n\nfor (i = 0; i < 10; i++)\n{\n    printf(\"%d\", i * 2);\n}\n"
+    },
+    {
+        "question": "What is the output of the following piece of code?",
+        "language": "C",
+        "answersArray": [
+            "9876543210",
+            "87654321",
+            "987654321",
+            "876543210"
+        ],
+        "correctAnswer": "876543210",
+        "code": "\nint i;\n\ni = 9;\nwhile (i--)\n{\n    printf(\"%d\", i);\n}\n"
+    },
+    {
+        "question": "What is the output of the following piece of code?",
+        "language": "C",
+        "answersArray": [
+            "876543210",
+            "87654321",
+            "987654321",
+            "9876543210"
+        ],
+        "correctAnswer": "87654321",
+        "code": "\nint i;\n\ni = 9;\nwhile (--i)\n{\n    printf(\"%d\", i);\n}\n"
+    },
+    {
+        "question": "What is the output of the following piece of code?",
+        "language": "C",
+        "answersArray": [
+            "-9-8-7-6-5-4-3-2-10",
+            "9876543210",
+            "-9-8-7-6-5-4-3-2-1",
+            "987654321"
+        ],
+        "correctAnswer": "987654321",
+        "code": "\nint i;\n\ni = -9;\nwhile (i < 0)\n{\n    printf(\"%d\", -i);\n    i++;\n}\n"
+    },
+    {
+        "question": "What is the identifier to print an address with printf?",
+        "language": "C",
+        "answersArray": [
+            "%p",
+            "%a",
+            "%x",
+            "%d"
+        ],
+        "correctAnswer": "%p",
+        "code": ""
+    },
+    {
+        "question": "What is the value of n after the following code is executed?",
+        "language": "C",
+        "answersArray": [
+            "99",
+            "0",
+            "402",
+            "98"
+        ],
+        "correctAnswer": "98",
+        "code": "\nint n = 98;\nint *p = &n;\n\np = 402;\n"
+    },
+    {
+        "question": "We declare the following variable What is the size in memory of the variable arr?",
+        "language": "C",
+        "answersArray": [
+            "32 bytes",
+            "4 bytes",
+            "8 bytes",
+            "20 bytes",
+            "10 bytes",
+            "5 bytes"
+        ],
+        "correctAnswer": "20 bytes",
+        "code": "\nint arr[5];\n"
+    },
+    {
+        "question": "What is the size of a pointer to an int (on a 64-bit architecture)",
+        "language": "C",
+        "answersArray": [
+            "4 bytes",
+            "1 byte",
+            "8 bytes",
+            "2 bytes"
+        ],
+        "correctAnswer": "8 bytes",
+        "code": ""
+    },
+    {
+        "question": "What is the value of n after the following code is executed?",
+        "language": "C",
+        "answersArray": [
+            "99",
+            "0",
+            "402",
+            "98"
+        ],
+        "correctAnswer": "402",
+        "code": "\nint n = 98;\nint *p = &n;\n\n*p = 402;\n"
+    },
+    {
+        "question": "What is the value of n after the following code is executed?",
+        "language": "C",
+        "answersArray": [
+            "99",
+            "0",
+            "402",
+            "98"
+        ],
+        "correctAnswer": "98",
+        "code": "\nint n = 98;\nint *p = &n;\n"
+    },
+    {
+        "question": "What is the value of n after the following code is executed?",
+        "language": "C",
+        "answersArray": [
+            "99",
+            "0",
+            "402",
+            "98"
+        ],
+        "correctAnswer": "98",
+        "code": "\nint n = 98;\nint *p = &n;\n\n*p++;\n"
+    },
+    {
+        "question": "What is the size of a pointer to a char (on a 64-bit architecture)",
+        "language": "C",
+        "answersArray": [
+            "4 bytes",
+            "1 byte",
+            "8 bytes",
+            "2 bytes"
+        ],
+        "correctAnswer": "8 bytes",
+        "code": ""
+    },
+    {
+        "question": "If we have a variable called var of type int, how can we get its address in memory?",
+        "language": "C",
+        "answersArray": [
+            "*var",
+            "&var",
+            "*(var)"
+        ],
+        "correctAnswer": "&var",
+        "code": ""
+    },
+    {
+        "question": "Is it possible to declare a pointer to a pointer?",
+        "language": "C",
+        "answersArray": [
+            "Yes",
+            "It depends on the type the pointer is pointing to",
+            "No"
+        ],
+        "correctAnswer": "Yes",
+        "code": ""
+    },
+    {
+        "question": "What happens when one tries to access an illegal memory location?",
+        "language": "C",
+        "answersArray": [
+            "The computer shuts down",
+            "The operation is ignored",
+            "There\u2019s a chance for the computer to catch fire, and sometimes even explode",
+            "Segmentation fault"
+        ],
+        "correctAnswer": "Segmentation fault",
+        "code": ""
+    },
+    {
+        "question": "The process of getting the value that is stored in the memory location pointed to by a pointer is called:",
+        "language": "C",
+        "answersArray": [
+            "Dereferencing",
+            "Pointing",
+            "Casting",
+            "Accessing"
+        ],
+        "correctAnswer": "Dereferencing",
+        "code": ""
+    },
+    {
+        "question": "We declare the following variable What is the equivalent of typing arr[2]?",
+        "language": "C",
+        "answersArray": [
+            "arr + 2",
+            "*(arr + 2)",
+            "*arr + 2"
+        ],
+        "correctAnswer": "*(arr + 2)",
+        "code": "\nint arr[5];\n"
+    },
+    {
+        "question": "What does this command line print?",
+        "language": "Python",
+        "answersArray": [
+            "98 Battery street, San Francisco",
+            "\u201c98 Battery street, San Francisco\u201d",
+            "San Francisco Battery street, 98",
+            "8 Battery street, San"
+        ],
+        "correctAnswer": "98 Battery street, San Francisco",
+        "code": "\n>>> print(f\"{98} Battery street, {'San Francisco'}\")\n"
+    },
+    {
+        "question": "What does this command line print?",
+        "language": "Python",
+        "answersArray": [
+            "Python",
+            "on",
+            "is",
+            "si",
+            "nohtyP"
+        ],
+        "correctAnswer": "is",
+        "code": "\n>>> a = \"Python is cool\"\n>>> print(a[7:-5])\n"
+    },
+    {
+        "question": "What does this command line print?",
+        "language": "Python",
+        "answersArray": [
+            "Holberton school",
+            "Holberton",
+            "\u2018Holberton school\u2019",
+            "\u201cHolberton school\u201d"
+        ],
+        "correctAnswer": "Holberton school",
+        "code": "\n>>> print(\"Holberton school\")\n"
+    },
+    {
+        "question": "What does this command line print?",
+        "language": "Python",
+        "answersArray": [
+            "o",
+            "ol",
+            "Nothing",
+            "l"
+        ],
+        "correctAnswer": "o",
+        "code": "\n>>> a = \"Python is cool\"\n>>> print(a[-2])\n"
+    },
+    {
+        "question": "What does this command line print?",
+        "language": "Python",
+        "answersArray": [
+            "cool",
+            "Python i",
+            "is cool",
+            "Python is"
+        ],
+        "correctAnswer": "is cool",
+        "code": "\n>>> a = \"Python is cool\"\n>>> print(a[7:])\n"
+    },
+    {
+        "question": "Who created Python?",
+        "language": "Python",
+        "answersArray": [
+            "Julien Barbier",
+            "Guido van Rossum",
+            "Yukihiro Matsumoto"
+        ],
+        "correctAnswer": "Guido van Rossum",
+        "code": ""
+    },
+    {
+        "question": "What does this command line print?",
+        "language": "Python",
+        "answersArray": [
+            "9 Battery street",
+            "98 Battery street",
+            "8 Battery street",
+            "f\"98 Battery street\""
+        ],
+        "correctAnswer": "98 Battery street",
+        "code": "\n>>> print(f\"{98} Battery street\")\n"
+    },
+    {
+        "question": "What does this command line print?",
+        "language": "Python",
+        "answersArray": [
+            "Python is",
+            "Python",
+            "Python is cool",
+            "Pytho"
+        ],
+        "correctAnswer": "Python",
+        "code": "\n>>> a = \"Python is cool\"\n>>> print(a[0:6])\n"
+    },
+    {
+        "question": "What does this command line print?",
+        "language": "Python",
+        "answersArray": [
+            "Python is",
+            "Pytho",
+            "is cool",
+            "Python"
+        ],
+        "correctAnswer": "Python",
+        "code": "\n>>> a = \"Python is cool\"\n>>> print(a[:6])\n"
+    },
+    {
+        "question": "What does this command line print?",
+        "language": "Python",
+        "answersArray": [
+            "o",
+            "P",
+            "h",
+            "n"
+        ],
+        "correctAnswer": "o",
+        "code": "\n>>> a = \"Python is cool\"\n>>> print(a[4])\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "Holberton",
+            "School"
+        ],
+        "correctAnswer": "Holberton",
+        "code": "\nif 12 == 48/3 or 12 is 12:\n    print(\"Holberton\")\nelse:\n    print(\"School\")\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "4 6 8 10 12 14 16 18",
+            "2 3 4 5 6 7 8 9 10",
+            "2 4 6 8",
+            "2 3 4 5 6 7 8 9"
+        ],
+        "correctAnswer": "2 4 6 8",
+        "code": "\nfor i in range(2, 10, 2):\n    print(i, end=\" \")\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "Holberton",
+            "School"
+        ],
+        "correctAnswer": "Holberton",
+        "code": "\nif 12 == 48/4:\n    print(\"Holberton\")\nelse:\n    print(\"School\")\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "2 3 4",
+            "2 4",
+            "3 4",
+            "2 3"
+        ],
+        "correctAnswer": "2 3",
+        "code": "\nfor i in range(2, 4):\n    print(i, end=\" \")\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "Holberton",
+            "School"
+        ],
+        "correctAnswer": "Holberton",
+        "code": "\nif True:\n    print(\"Holberton\")\nelse:\n    print(\"School\")\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "Holberton",
+            "School"
+        ],
+        "correctAnswer": "School",
+        "code": "\nif 12 == 48/4 and False:\n    print(\"Holberton\")\nelse:\n    print(\"School\")\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "Holberton",
+            "School",
+            "C is fun"
+        ],
+        "correctAnswer": "C is fun",
+        "code": "\na = 12\nif a < 2:\n    print(\"Holberton\")\nelif a % 2 == 0:\n    print(\"C is fun\")\nelse:\n    print(\"School\")\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "0 1 2 3",
+            "1 2 3 4",
+            "0 1 2 3 4",
+            "1 2 3"
+        ],
+        "correctAnswer": "0 1 2 3",
+        "code": "\nfor i in range(4):\n    print(i, end=\" \")\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "Holberton",
+            "School",
+            "C is fun"
+        ],
+        "correctAnswer": "Holberton",
+        "code": "\na = 12\nif a > 2:\n    if a % 2 == 0:\n        print(\"Holberton\")\n    else:\n        print(\"C is fun\")\nelse:\n    print(\"School\")\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "Counter: 12",
+            "Counter: 101",
+            "Counter: 89"
+        ],
+        "correctAnswer": "Counter: 12",
+        "code": "\n>>> def my_function(counter=89):\n>>>     print(\"Counter: {}\".format(counter))\n>>> \n>>> my_function(12)\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "function my_function at \u2026",
+            "\u201cIn my function\u201d",
+            "Nothing",
+            "In my function"
+        ],
+        "correctAnswer": "function my_function at \u2026",
+        "code": "\n>>> def my_function():\n>>>     print(\"In my function\")\n>>> \n>>> my_function\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "function my_function at \u2026",
+            "\u201cIn my function\u201d",
+            "Nothing",
+            "In my function"
+        ],
+        "correctAnswer": "In my function",
+        "code": "\n>>> def my_function():\n>>>     print(\"In my function\")\n>>> \n>>> my_function()\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "Counter: counter",
+            "Counter: 12",
+            "Counter: c"
+        ],
+        "correctAnswer": "Counter: 12",
+        "code": "\n>>> def my_function(counter):\n>>>     print(\"Counter: {}\".format(counter))\n>>> \n>>> my_function(12)\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "90",
+            "1",
+            "891",
+            "89"
+        ],
+        "correctAnswer": "90",
+        "code": "\n>>> def my_function(counter=89):\n>>>     return counter + 1\n>>> \n>>> print(my_function())\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "Counter: 12",
+            "Counter: 101",
+            "Counter: 89"
+        ],
+        "correctAnswer": "Counter: 89",
+        "code": "\n>>> def my_function(counter=89):\n>>>     print(\"Counter: {}\".format(counter))\n>>> \n>>> my_function()\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "6",
+            "2",
+            "8",
+            "4"
+        ],
+        "correctAnswer": "4",
+        "code": "\n>>> a = [1, 2, 3, 4]\n>>> len(a)\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "[1, 2, 3, 4]",
+            "[1]",
+            "b",
+            "a",
+            "[1, 2, 10, 4]"
+        ],
+        "correctAnswer": "[1, 2, 10, 4]",
+        "code": "\n>>> a = [1, 2, 3, 4]\n>>> b = a\n>>> a[2] = 10\n>>> a\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "4",
+            "-1",
+            "[4, 3, 2, 1]",
+            "2"
+        ],
+        "correctAnswer": "4",
+        "code": "\n>>> a = [1, 2, 3, 4]\n>>> a[-1]\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "[1, 2, 3, 4]",
+            "[1]",
+            "b",
+            "a",
+            "[1, 2, 10, 4]"
+        ],
+        "correctAnswer": "[1, 2, 10, 4]",
+        "code": "\n>>> a = [1, 2, 3, 4]\n>>> b = a\n>>> a[2] = 10\n>>> b\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "1",
+            "[1, 2, 3, 4]",
+            "a",
+            "[1]"
+        ],
+        "correctAnswer": "[1, 2, 3, 4]",
+        "code": "\n>>> a = [1, 2, 3, 4]\n>>> b = a\n>>> b\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "[1]",
+            "1",
+            "[1, 2, 3, 4]",
+            "[1, 2]",
+            "2"
+        ],
+        "correctAnswer": "1",
+        "code": "\n>>> a = [1, 2, 3, 4]\n>>> a[0]\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "-3",
+            "2",
+            "[4, 3]"
+        ],
+        "correctAnswer": "2",
+        "code": "\n>>> a = [1, 2, 3, 4]\n>>> a[-3]\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "[1, 2, 3]",
+            "[2, 3]",
+            "[1, 2]"
+        ],
+        "correctAnswer": "[2, 3]",
+        "code": "\n>>> a = [1, 2, 3, 4]\n>>> a[1:3]\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "[1, 2, 10, 4]",
+            "[1, 2, 3, 4]",
+            "[1, 2, 10, 10]",
+            "[1, 10, 3, 4]"
+        ],
+        "correctAnswer": "[1, 2, 10, 4]",
+        "code": "\n>>> a = [1, 2, 3, 4]\n>>> a[2] = 10\n>>> a\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "2",
+            "6",
+            "5"
+        ],
+        "correctAnswer": "5",
+        "code": "\n>>> a = [1, 2, 3, 4]\n>>> a.append(5)\n>>> len(a)\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "0",
+            "\u2018age\u2019",
+            "89",
+            "Nothing"
+        ],
+        "correctAnswer": "0",
+        "code": "\n>>> a = { 'id': 89, 'name': \"John\" }\n>>> a.get('age', 0)\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "1 2 3",
+            "1 2 3 4",
+            "0 1 2 3"
+        ],
+        "correctAnswer": "1 2 3",
+        "code": "\n>>> for i in range(1, 4):\n>>>     print(i, end=\" \")\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "0 1 2 3",
+            "Hello Holberton School 98",
+            "1 2 3 4"
+        ],
+        "correctAnswer": "Hello Holberton School 98",
+        "code": "\n>>> for i in [\"Hello\", \"Holberton\", \"School\", 98]:\n>>>     print(i, end=\" \")\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "a[\u2018id\u2019]",
+            "id",
+            "John",
+            "89",
+            "\u2018id\u2019"
+        ],
+        "correctAnswer": "89",
+        "code": "\n>>> a = { 'id': 89, 'name': \"John\" }\n>>> a.get('id')\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "1 2 3",
+            "0 1 2 3",
+            "1 2 3 4",
+            "0 1 2 3 5"
+        ],
+        "correctAnswer": "1 2 3 4",
+        "code": "\n>>> for i in [1, 2, 3, 4]:\n>>>     print(i, end=\" \")\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "1 2 3",
+            "0 1 2",
+            "0 1 2 3"
+        ],
+        "correctAnswer": "0 1 2",
+        "code": "\n>>> for i in range(0, 3):\n>>>     print(i, end=\" \")\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "1 3 4 2",
+            "0 1 2 3",
+            "1 3 4 2 0",
+            "1 2 3 4"
+        ],
+        "correctAnswer": "1 3 4 2",
+        "code": "\n>>> for i in [1, 3, 4, 2]:\n>>>     print(i, end=\" \")\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "a[\u2018id\u2019]",
+            "id",
+            "John",
+            "89",
+            "\u2018id\u2019"
+        ],
+        "correctAnswer": "89",
+        "code": "\n>>> a = { 'id': 89, 'name': \"John\" }\n>>> a['id']\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "89",
+            "\u2018age\u2019",
+            "Nothing",
+            "12",
+            "Not found"
+        ],
+        "correctAnswer": "Nothing",
+        "code": "\n>>> a = { 'id': 89, 'name': \"John\" }\n>>> a.get('age')\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "[1, 2, 3, 4]",
+            "4",
+            "[3]",
+            "3",
+            "[4]"
+        ],
+        "correctAnswer": "4",
+        "code": "\n>>> a = { 'id': 89, 'name': \"John\", 'projects': [1, 2, 3, 4] }\n>>> a.get('projects')[3]\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "Amy",
+            "89",
+            "Nothing",
+            "Bob",
+            "[ { \u2018id\u2019: 82, \u2018name\u2019: \u201cBob\u201d }, { \u2018id\u2019: 83, \u2018name\u2019: \u201cAmy\u201d } ]"
+        ],
+        "correctAnswer": "Amy",
+        "code": "\n>>> a = { 'id': 89, 'name': \"John\", 'projects': [1, 2, 3, 4], 'friends': [ { 'id': 82, 'name': \"Bob\" }, { 'id': 83, 'name': \"Amy\" } ] }\n>>> a.get('friends')[-1].get(\"name\")\n"
+    },
+    {
+        "question": "What do these lines print?",
+        "language": "Python",
+        "answersArray": [
+            "[1]",
+            "\u2018projects\u2019",
+            "Nothing",
+            "list",
+            "[1, 2, 3, 4]"
+        ],
+        "correctAnswer": "[1, 2, 3, 4]",
+        "code": "\n>>> a = { 'id': 89, 'name': \"John\", 'projects': [1, 2, 3, 4] }\n>>> a.get('projects')\n"
+    }
+]
