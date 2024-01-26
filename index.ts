@@ -80,7 +80,7 @@ class QuestionClass {
 async function main() {
     console.clear();
 
-    clack.intro(`${color.bold(color.cyan('Welcome to the Alx trivia!'))}\n\n${color.yellow(`You will be asked random Alx questions, Answer as much as you can.\nif answered incorrectly you start over!`)}\n\n${color.green('Good luck!')}`);
+    clack.intro(`${color.bold(color.cyan('Welcome to the Alx trivia!'))}\n\n${color.bold(color.yellow(`You will be asked random Alx questions, Answer as much as you can.\nif answered incorrectly you start over!`))}\n\n${color.green('Good luck!')}`);
 
     await setTimeout(2000);
 
