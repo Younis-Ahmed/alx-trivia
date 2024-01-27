@@ -1,0 +1,8 @@
+.changeset/
+.github/
+package-lock.json
+tsconfig.json
+.devcontainer/
+.vscode/
+.env/
+requirements.txt
