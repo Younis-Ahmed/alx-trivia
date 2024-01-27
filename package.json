@@ -2,9 +2,10 @@
   "name": "@younis-ahmed/alx-trivia",
   "description": "A simple trivia game for the terminal",
   "author": {
-    "name": "Younis Ahmed"},
+    "name": "Younis Ahmed"
+  },
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
