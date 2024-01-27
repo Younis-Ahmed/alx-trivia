@@ -35,7 +35,7 @@ async function questionDisplay(question: string, mutlipleAnswers: string[], corr
         "Git" : color.magenta
     };
     
-    question = `${question}  ${(languageColor[language] ? languageColor[language] : color.green)(`[${language}]`)}\n${code ? color.cyan(code) : ''}`;
+    question = `${question}  ${(languageColor[language] ?? color.green)(`[${language}]`)}\n${code ? color.cyan(code) : ''}`;
     const answer: string | symbol = await clack.select({
         message: question,
         initialValue: '1',
@@ -104,14 +104,17 @@ async function main() {
     }
 
     while (true) {
-        const randomQuestion: number = Math.floor(Math.random() * questionsArray.length);
-        const question: QuestionClass = questionsArray[randomQuestion];
-        await questionDisplay(question.question, question.answersArray, question.correctAnswer, question.language, question.code);
-        questionsArray.splice(randomQuestion, 1);
         if (questionsArray.length === 0) {
             console.log(color.green('You answered all the questions correctly! 🤩'));
             process.exit(0);
         }
+        const randomQuestion: number = Math.floor(Math.random() * questionsArray.length);
+        const question: QuestionClass | undefined = questionsArray[randomQuestion];
+        if (!question) {
+            continue;
+        }
+        await questionDisplay(question.question, question.answersArray, question.correctAnswer, question.language, question.code);
+        questionsArray.splice(randomQuestion, 1);
     }
 
 }
