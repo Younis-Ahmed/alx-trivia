@@ -1,5 +1,8 @@
 {
   "name": "@younis-ahmed/alx-trivia",
+  "description": "A simple trivia game for the terminal",
+  "author": {
+    "name": "Younis Ahmed"},
   "license": "MIT",
   "version": "0.0.1",
   "main": "dist/index.js",
@@ -8,9 +11,11 @@
   "publishConfig": {
     "access": "public"
   },
+  "private": false,
   "scripts": {
     "build": "tsup index.ts --format cjs,esm --dts",
-    "lint": "tsc"
+    "lint": "tsc",
+    "release": "npm run lint && npm run build && changeset publish"
   },
   "dependencies": {
     "@clack/prompts": "^0.7.0",
