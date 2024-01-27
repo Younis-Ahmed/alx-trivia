@@ -1,9 +1,10 @@
 {
   "name": "alx-trivia",
   "license": "MIT",
-  
+  "version": "0.0.1",
   "scripts": {
-    "build": "tsup index.ts --format cjs,esm --dts"
+    "build": "tsup index.ts --format cjs,esm --dts",
+    "lint": "tsc"
   },
   "dependencies": {
     "@clack/prompts": "^0.7.0",
@@ -11,5 +12,8 @@
     "picocolors": "^1.0.0",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1"
   }
 }
