@@ -1,4 +1,7 @@
 {
+  "name": "alx-trivia",
+  "license": "MIT",
+  
   "dependencies": {
     "@clack/prompts": "^0.7.0",
     "@types/node": "^20.11.5",
