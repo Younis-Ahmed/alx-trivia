@@ -3,7 +3,7 @@
   "license": "MIT",
   
   "scripts": {
-    "build": "tsup index.ts --format cjs --dts"
+    "build": "tsup index.ts --format cjs,esm --dts"
   },
   "dependencies": {
     "@clack/prompts": "^0.7.0",
