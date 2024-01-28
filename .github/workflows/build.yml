@@ -75,3 +75,4 @@ jobs:
               env:
                     NODE_AUTH_TOKEN: ${{ secrets.GH_PAT }}
                     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+                    GITHUB_TOKEN: ${{ secrets.GH_PAT }}
