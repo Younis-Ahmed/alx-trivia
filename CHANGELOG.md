@@ -1,5 +1,11 @@
 # @younis-ahmed/alx-trivia
 
+## 0.1.2
+
+### Patch Changes
+
+- adding github packages into CI/CD pipeline to standardizes build and dist
+
 ## 0.1.1
 
 ### Patch Changes
