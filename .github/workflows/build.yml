@@ -67,11 +67,6 @@ jobs:
                   scope: '@younis-ahmed'
             - run: echo "registry=https://npm.pkg.github.com/Younis-ahmed" >> .npmrc
             - run: npm publish $(ls *.tgz)
-            - name: Create PR/Publish
-              id: changesets
-              uses: changesets/action@v1
-              with:
-                publish: npm run release
               env:
                     NODE_AUTH_TOKEN: ${{ secrets.GH_PAT }}
                     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
