@@ -64,8 +64,9 @@ jobs:
               with:
                   node-version: 18.x
                   registry-url: https://npm.pkg.github.com/
-                  scope: '@Younis-ahmed'
+                  scope: '@younis-ahmed'
             - run: echo "registry=https://npm.pkg.github.com/Younis-ahmed" >> .npmrc
             - run: npm publish $(ls *.tgz)
               env:
                     NODE_AUTH_TOKEN: ${{ secrets.GH_PAT }}
+                    NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
