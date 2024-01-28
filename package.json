@@ -5,13 +5,13 @@
     "name": "Younis Ahmed"
   },
   "license": "MIT",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "publishConfig": {
     "access": "public",
-    "registry":"https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/"
   },
   "private": false,
   "scripts": {
