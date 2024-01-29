@@ -12,6 +12,16 @@
   "publishConfig": {
     "access": "public"
   },
+  "bin": {
+    "@younis-ahmed/alx-trivia": "bin/app.js"
+  },
+  "keywords": [
+    "trivia",
+    "terminal",
+    "cli",
+    "game",
+    "alx"
+  ],
   "private": false,
   "scripts": {
     "build": "tsup index.ts --format cjs,esm --dts",
