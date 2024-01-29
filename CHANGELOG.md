@@ -1,5 +1,15 @@
 # @younis-ahmed/alx-trivia
 
+## 0.3.1
+
+### Patch Changes
+
+- Adding executable to enable binary execution from npm registry.
+
+  ```sh
+  npx @younis-ahmed/alx-trivia
+  ```
+
 ## 0.1.0
 
 ### Minor Changes
