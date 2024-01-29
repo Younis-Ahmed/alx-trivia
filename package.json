@@ -16,6 +16,7 @@
   "scripts": {
     "build": "tsup index.ts --format cjs,esm --dts",
     "lint": "tsc",
+    "test": "jest",
     "release": "npm run lint && npm run build && changeset publish"
   },
   "dependencies": {
