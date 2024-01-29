@@ -31,7 +31,7 @@ interface Question {
  * @param code - Optional code snippet related to the question.
  * @returns A promise that resolves to void.
  */
-async function questionDisplay(question: string, mutlipleAnswers: string[], correctAnswer: string, language: string, code: string) : Promise<void> {
+export async function questionDisplay(question: string, mutlipleAnswers: string[], correctAnswer: string, language: string, code: string) : Promise<void> {
     const options: Option[] = []; // [{value: "1", label: "1"}, {value: "2", label: "2"}]
 
     // Loop through the answers and push them to the options array
@@ -99,7 +99,7 @@ class QuestionClass {
 /**
  * Main function to run the program
  */
-async function main() {
+export async function main() {
     console.clear(); // Clear the console
 
     clack.intro(
