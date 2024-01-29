@@ -20,13 +20,23 @@ interface Question {
     code: string;
 }
 
+/**
+ * Function to display the question and answers in the terminal
+ * @param question 
+ * @param mutlipleAnswers 
+ * @param correctAnswer 
+ * @param language 
+ * @param code 
+ */
 async function questionDisplay(question: string, mutlipleAnswers: string[], correctAnswer: string, language: string, code: string) : Promise<void> {
-    const options: Option[] = [];
+    const options: Option[] = []; // [{value: "1", label: "1"}, {value: "2", label: "2"}]
 
+    // Loop through the answers and push them to the options array
     mutlipleAnswers.forEach((answer: string) => {
         options.push({ value: answer, label: answer });
     });
 
+    // Create a dictionary to store the color of the language
     const languageColor: { [key: string]: Formatter } = {
         "C" : color.blue, 
         "Python" : color.green, 
@@ -35,6 +45,7 @@ async function questionDisplay(question: string, mutlipleAnswers: string[], corr
         "Git" : color.magenta
     };
     
+    // Add the language color to the question depending on the language
     question = `${question}  ${(languageColor[language] ?? color.green)(`[${language}]`)}\n${code ? color.cyan(code) : ''}`;
     const answer: string | symbol = await clack.select({
         message: question,
@@ -42,11 +53,13 @@ async function questionDisplay(question: string, mutlipleAnswers: string[], corr
         options: options,
     });
 
+    // Add a spinner to make it look like the program is thinking 😁
     const spinner = clack.spinner();
     spinner.start();
     await setTimeout(1500);
     spinner.stop();
     
+    // Check if the answer is correct or not and console log the result, of every 10 correct answers console log a message
     if (answer === correctAnswer) {
         console.log(color.green('Correct!'));
         if (correctAnswers && correctAnswers % 10 === 0) {
@@ -61,6 +74,14 @@ async function questionDisplay(question: string, mutlipleAnswers: string[], corr
     }
 }
 
+/**
+ * Class to store the questions and answers
+ * @param question
+ * @param answersArray
+ * @param correctAnswer
+ * @param language
+ * @param code
+ */
 class QuestionClass {
     question: string;
     answersArray: string[];
@@ -77,8 +98,11 @@ class QuestionClass {
     }
 }
 
+/**
+ * Main function to run the program
+ */
 async function main() {
-    console.clear();
+    console.clear(); // Clear the console
 
     clack.intro(`${color.bold(color.cyan('Welcome to the Alx trivia!'))}\n\n${color.bold(color.yellow(`You will be asked random Alx questions, Answer as much as you can.\nif answered incorrectly you start over!`))}\n\n${color.green('Good luck!')}`);
 
@@ -86,11 +110,11 @@ async function main() {
 
     const questionsArray: QuestionClass[] = [];
 
-    questions.forEach((question: Question) => {
+    questions.forEach((question: Question) => { // Loop through the questions and answers and push them to the questionsArray
         questionsArray.push(new QuestionClass(question.question, question.answersArray, question.correctAnswer, question.language, question.code));
     });
 
-    const readyToPlay: string | symbol = await clack.select({
+    const readyToPlay: string | symbol = await clack.select({ // Ask the user if they are ready to play
         message: `No cheating. Results at the end.\n\n${color.underline(color.yellow("[Ctrl + D] Exit [Ctrl + C] Exit + result)"))}\n\nReady to play?`,
         initialValue: "Yes",
         options: [
@@ -103,7 +127,7 @@ async function main() {
         process.exit(0);
     }
 
-    while (true) {
+    while (true) { // Loop through the questionsArray and display the questions and answers
         if (questionsArray.length === 0) {
             console.log(color.green('You answered all the questions correctly! 🤩'));
             process.exit(0);
