@@ -20,13 +20,16 @@ interface Question {
     code: string;
 }
 
+
 /**
- * Function to display the question and answers in the terminal
- * @param question 
- * @param mutlipleAnswers 
- * @param correctAnswer 
- * @param language 
- * @param code 
+ * Displays a question with multiple answers and prompts the user to select an answer.
+ * 
+ * @param question - The question to display.
+ * @param mutlipleAnswers - An array of possible answers.
+ * @param correctAnswer - The correct answer.
+ * @param language - The programming language associated with the question.
+ * @param code - Optional code snippet related to the question.
+ * @returns A promise that resolves to void.
  */
 async function questionDisplay(question: string, mutlipleAnswers: string[], correctAnswer: string, language: string, code: string) : Promise<void> {
     const options: Option[] = []; // [{value: "1", label: "1"}, {value: "2", label: "2"}]
@@ -59,14 +62,14 @@ async function questionDisplay(question: string, mutlipleAnswers: string[], corr
     await setTimeout(1500);
     spinner.stop();
     
-    // Check if the answer is correct or not and console log the result, of every 10 correct answers console log a message
+    // Check if the answer is correct and console log the result, of every 10 correct answers console log a message
     if (answer === correctAnswer) {
         console.log(color.green('Correct!'));
         if (correctAnswers && correctAnswers % 10 === 0) {
             console.log(color.green(`${correctAnswers} hits streak, Keep going! 🤩`));
         }
         correctAnswers++;
-    } else {
+    } else { // If the answer is incorrect console log the result and exit the program
         console.clear();
         console.log(color.bold(color.red('❌ Game over!\n')));
         console.log(color.bold(color.green(`You answered ${correctAnswers} questions correctly!\n\n`)));
@@ -75,12 +78,7 @@ async function questionDisplay(question: string, mutlipleAnswers: string[], corr
 }
 
 /**
- * Class to store the questions and answers
- * @param question
- * @param answersArray
- * @param correctAnswer
- * @param language
- * @param code
+ * Class to store the questions and answers, Related to the questionDisplay function
  */
 class QuestionClass {
     question: string;
@@ -104,7 +102,10 @@ class QuestionClass {
 async function main() {
     console.clear(); // Clear the console
 
-    clack.intro(`${color.bold(color.cyan('Welcome to the Alx trivia!'))}\n\n${color.bold(color.yellow(`You will be asked random Alx questions, Answer as much as you can.\nif answered incorrectly you start over!`))}\n\n${color.green('Good luck!')}`);
+    clack.intro(
+        `${color.bold(color.cyan('Welcome to the Alx trivia!'))}\n\n
+        ${color.bold(color.yellow(`You will be asked random Alx questions, Answer as much as you can.\nif answered incorrectly you start over!`))}\n\n
+        ${color.green('Good luck!')}`);
 
     await setTimeout(2000);
 
