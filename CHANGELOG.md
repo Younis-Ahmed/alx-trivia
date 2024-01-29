@@ -1,5 +1,17 @@
 # @younis-ahmed/alx-trivia
 
+## 0.3.2
+
+### Patch Changes
+
+- Enabling npx command + bug fix
+
+  ```bash
+
+  npx @younis-ahmed/alx-trivia
+
+  ```
+
 ## 0.3.1
 
 ### Patch Changes
