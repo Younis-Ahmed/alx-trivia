@@ -42,7 +42,7 @@ jobs:
 
             - run: npm ci
             - run: npm run build
-            - run: npm version prerelease --preid=ci-$GITHUB_RUN_ID --no-git-tag-version
+            - run: npm version prerelease --preid=preRel-$GITHUB_RUN_ID --no-git-tag-version
             - run: npm pack
             - name: Upload package
               uses: actions/upload-artifact@v2
