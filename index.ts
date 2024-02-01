@@ -72,7 +72,7 @@ export async function questionDisplay(question: string, mutlipleAnswers: string[
         correctAnswers++;
     } else { // If the answer is incorrect console log the result and exit the program
         console.clear();
-        console.log(lolcatjs.fromString(figlet.textSync('Game over!\n', 'ANSI Shadow')));
+        lolcatjs.fromString(figlet.textSync('Game over!', 'ANSI Shadow'));
         console.log(color.green(`You answered ${correctAnswers} questions correctly!\n\n`));
         process.exit(0); 
     }
@@ -103,8 +103,9 @@ class QuestionClass {
 export async function main() {
     console.clear(); // Clear the console
     lolcatjs.options.seed = 505; 
+    lolcatjs.fromString(figlet.textSync('ALX TRIVIA!', {font: 'ANSI Shadow', horizontalLayout: 'default', verticalLayout: 'default'}))
     clack.intro(
-        `${lolcatjs.fromString(figlet.textSync('ALX TRIVIA!', {font: 'ANSI Shadow' }))}${color.bold(color.yellow(`You will be asked random Alx questions, Answer as much as you can.`))}\n\n
+        `${color.bold(color.yellow(`You will be asked random Alx questions, Answer as much as you can.`))}\n\n
         ${color.green('Good luck!')}`);
 
     await setTimeout(2000);
