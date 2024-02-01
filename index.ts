@@ -3,7 +3,7 @@ import { setTimeout } from 'node:timers/promises';
 import questions from './questions.json';
 import color from 'picocolors';
 import { Formatter } from 'picocolors/types';
-
+import figlet from 'figlet';
 
 let correctAnswers: number = 0;
 
@@ -61,7 +61,7 @@ export async function questionDisplay(question: string, mutlipleAnswers: string[
     spinner.start();
     await setTimeout(1500);
     spinner.stop();
-    
+
     // Check if the answer is correct and console log the result, of every 10 correct answers console log a message
     if (answer === correctAnswer) {
         console.log(color.green('Correct!'));
@@ -71,9 +71,9 @@ export async function questionDisplay(question: string, mutlipleAnswers: string[
         correctAnswers++;
     } else { // If the answer is incorrect console log the result and exit the program
         console.clear();
-        console.log(color.bold(color.red('❌ Game over!\n')));
-        console.log(color.bold(color.green(`You answered ${correctAnswers} questions correctly!\n\n`)));
-        process.exit(0);
+        console.log(color.red(figlet.textSync('Game over!\n', 'ANSI Shadow')));
+        console.log(color.green(`You answered ${correctAnswers} questions correctly!\n\n`));
+        process.exit(0); 
     }
 }
 
