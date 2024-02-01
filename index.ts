@@ -4,6 +4,7 @@ import questions from './questions.json';
 import color from 'picocolors';
 import { Formatter } from 'picocolors/types';
 import figlet from 'figlet';
+import lolcatjs from 'lolcatjs';
 
 let correctAnswers: number = 0;
 
@@ -62,6 +63,8 @@ export async function questionDisplay(question: string, mutlipleAnswers: string[
     await setTimeout(1500);
     spinner.stop();
 
+    lolcatjs.options.seed = Math.round(Math.random() * 1000);
+    lolcatjs.options.colors = true;
     // Check if the answer is correct and console log the result, of every 10 correct answers console log a message
     if (answer === correctAnswer) {
         console.log(color.green('Correct!'));
@@ -71,7 +74,7 @@ export async function questionDisplay(question: string, mutlipleAnswers: string[
         correctAnswers++;
     } else { // If the answer is incorrect console log the result and exit the program
         console.clear();
-        console.log(color.red(figlet.textSync('Game over!\n', 'ANSI Shadow')));
+        console.log(lolcatjs.fromString(figlet.textSync('Game over!\n', 'ANSI Shadow')));
         console.log(color.green(`You answered ${correctAnswers} questions correctly!\n\n`));
         process.exit(0); 
     }
