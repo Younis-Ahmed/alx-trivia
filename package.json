@@ -14,7 +14,7 @@
   },
   "private": false,
   "scripts": {
-    "build": "tsup index.ts --format cjs,esm --dts",
+    "build": "tsup index.ts --format cjs,esm --dts && cp declare.d.ts dist/",
     "lint": "tsc",
     "release": "npm run lint && npm run build && changeset publish"
   },
