@@ -1,6 +1,6 @@
 {
   "name": "@younis-ahmed/alx-trivia",
-  "description": "A simple trivia game for the terminal",
+  "description": "Trivia game for the terminal based on the ALX curriculum",
   "author": {
     "name": "Younis Ahmed"
   },
