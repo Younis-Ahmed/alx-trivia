@@ -5,7 +5,7 @@
     "name": "Younis Ahmed"
   },
   "license": "MIT",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/Younis-Ahmed/alx-trivia#README.md",
   "private": false,
-
   "bin": "bin/app.js",
   "keywords": [
     "trivia",
@@ -28,7 +27,7 @@
     "alx"
   ],
   "scripts": {
-    "build": "tsup index.ts --format cjs,esm --dts && cp declare.d.ts dist/", 
+    "build": "tsup index.ts --format cjs,esm --dts && cp declare.d.ts dist/",
     "lint": "tsc",
     "release": "npm run lint && npm run build && changeset publish",
     "debug": "tsc --sourcemap"

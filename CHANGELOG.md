@@ -1,5 +1,19 @@
 # @younis-ahmed/alx-trivia
 
+## 0.4.0
+
+### Minor Changes
+
+- - Refactoring figlet for intro + lolcat
+
+  - Undefined bug fixes
+
+  - Refactored Pre-released variant with prefixes
+
+  - Repurposed github action to add declare.d.ts into dist needs shx package to work with matrix.os[patch]
+
+  - Added homepage + repo to npm registry
+
 ## 0.3.2
 
 ### Patch Changes
