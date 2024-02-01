@@ -74,7 +74,7 @@ export async function questionDisplay(question: string, mutlipleAnswers: string[
         correctAnswers++;
     } else { // If the answer is incorrect console log the result and exit the program
         console.clear();
-        console.log(lolcatjs.fromString(figlet.textSync('Game over!\n', 'ANSI Shadow')));
+        console.log(lolcatjs.fromString(figlet.textSync('Game over!', 'ANSI Shadow')));
         console.log(color.green(`You answered ${correctAnswers} questions correctly!\n\n`));
         process.exit(0); 
     }
