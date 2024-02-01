@@ -63,8 +63,6 @@ export async function questionDisplay(question: string, mutlipleAnswers: string[
     await setTimeout(1500);
     spinner.stop();
 
-    lolcatjs.options.seed = Math.round(Math.random() * 1000);
-    lolcatjs.options.colors = true;
     // Check if the answer is correct and console log the result, of every 10 correct answers console log a message
     if (answer === correctAnswer) {
         console.log(color.green('Correct!'));
@@ -104,10 +102,9 @@ class QuestionClass {
  */
 export async function main() {
     console.clear(); // Clear the console
-
+    lolcatjs.options.seed = 505; 
     clack.intro(
-        `${color.bold(color.cyan('Welcome to the Alx trivia!'))}\n\n
-        ${color.bold(color.yellow(`You will be asked random Alx questions, Answer as much as you can.\nif answered incorrectly you start over!`))}\n\n
+        `${lolcatjs.fromString(figlet.textSync('ALX TRIVIA!', {font: 'ANSI Shadow' }))}${color.bold(color.yellow(`You will be asked random Alx questions, Answer as much as you can.`))}\n\n
         ${color.green('Good luck!')}`);
 
     await setTimeout(2000);
