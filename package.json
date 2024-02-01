@@ -12,6 +12,11 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Younis-Ahmed/alx-trivia.git"
+  },
+  "homepage": "https://github.com/Younis-Ahmed/alx-trivia#README.md",
   "private": false,
   "scripts": {
     "build": "tsup index.ts --format cjs,esm --dts && cp declare.d.ts dist/",
