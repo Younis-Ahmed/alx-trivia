@@ -18,6 +18,15 @@
   },
   "homepage": "https://github.com/Younis-Ahmed/alx-trivia#README.md",
   "private": false,
+
+  "bin": "bin/app.js",
+  "keywords": [
+    "trivia",
+    "terminal",
+    "cli",
+    "game",
+    "alx"
+  ],
   "scripts": {
     "build": "tsup index.ts --format cjs,esm --dts && cp declare.d.ts dist/",
     "lint": "tsc",
