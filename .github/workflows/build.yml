@@ -24,7 +24,7 @@ jobs:
               run: |
                   rm -rf node_modules
                   rm -f package-lock.json
-                  npm ci
+                  npm i
                   npm test --if-present
                   npm run lint
                   npm run build 
