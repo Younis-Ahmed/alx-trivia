@@ -1,5 +1,15 @@
 # @younis-ahmed/alx-trivia
 
+## 0.4.1
+
+### Patch Changes
+
+- - Remove \*.d.ts from manual append during build time
+
+  - Added macOs and windows to matrix.os
+
+  - Push readme and other informative metadata to npm registry
+
 ## 0.4.0
 
 ### Minor Changes
