@@ -22,6 +22,8 @@ jobs:
                   node-version: ${{ matrix.node-version }}
             - name: npm install, build, and test
               run: |
+                  rm -rf node_modules
+                  rm -f package-lock.json
                   npm ci
                   npm test --if-present
                   npm run lint
