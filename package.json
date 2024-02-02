@@ -5,7 +5,7 @@
     "name": "Younis Ahmed"
   },
   "license": "MIT",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -27,7 +27,7 @@
     "alx"
   ],
   "scripts": {
-    "build": "tsup index.ts --format cjs,esm --dts && cp declare.d.ts dist/",
+    "build": "tsup index.ts --format cjs,esm --dts",
     "lint": "tsc",
     "release": "npm run lint && npm run build && changeset publish",
     "debug": "tsc --sourcemap"
