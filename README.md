@@ -47,8 +47,10 @@ Installing and setting up clone.
 ### Installation Through npm
 
 ```bash
-npm i @younis-ahmed/alx-trivia or npx @younis-ahmed/alx-trivia -y
+npm i @younis-ahmed/alx-trivia
 ```
+ or
+ ```npx @younis-ahmed/alx-trivia -y```
 
 ## Usage
 
