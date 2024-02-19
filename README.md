@@ -50,7 +50,9 @@ Installing and setting up clone.
 npm i @younis-ahmed/alx-trivia
 ```
  or
- ```npx @younis-ahmed/alx-trivia -y```
+ ```sh
+ npx @younis-ahmed/alx-trivia -y
+```
 
 ## Usage
 
