@@ -1885,3 +1885,45 @@
         "correctAnswer": "malloc(10 * sizeof(int))",
         "code": ""
     },
+    {
+        "question": "malloc returns a pointer",
+        "language": "C",
+        "answersArray": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": "True",
+        "code": ""
+    },
+    {
+        "question": "You can do this:",
+        "language": "C",
+        "answersArray": [
+            "Yes",
+            "No"
+        ],
+        "correctAnswer": "No",
+        "code": "\nfree(\"Best School\");\n"
+    },
+    {
+        "question": "You can do this:",
+        "language": "C",
+        "answersArray": [
+            "Yes",
+            "No"
+        ],
+        "correctAnswer": "No",
+        "code": "\nchar str[] = \"Best School\";\n\nfree (str);\n"
+    },
+    {
+        "question": "What is wrong with this code:",
+        "language": "C",
+        "answersArray": [
+            "You can\u2019t call strcpy with a string literal",
+            "You don\u2019t have enough space to store the copy of the string \u201cBest School\u201d",
+            "malloc can fail so we should check its return value all the time before using the pointers returned by the function.",
+            "There is no comment"
+        ],
+        "correctAnswer": "There is no comment",
+        "code": "\n\n\nint cp(void)\n{\n    char *s;\n\n    s = malloc(12);\n    strcpy(s, \"Best School\");\n    return (0);\n}\n"
+    },
