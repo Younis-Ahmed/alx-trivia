@@ -1494,3 +1494,62 @@
         "correctAnswer": "1",
         "code": "\nint a[5][2] = {{1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10}};\n"
     },
+    {
+        "question": "In this following code, what is the value of a[1][1]?",
+        "language": "C",
+        "answersArray": [
+            "3",
+            "1",
+            "4",
+            "2"
+        ],
+        "correctAnswer": "4",
+        "code": "\nint a[5][2] = {{1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10}};\n"
+    },
+    {
+        "question": "What is the size of *p in this code?",
+        "language": "C",
+        "answersArray": [
+            "4 bytes",
+            "16 bytes",
+            "8 bytes"
+        ],
+        "correctAnswer": "8 bytes",
+        "code": "\nint **p;\n"
+    },
+    {
+        "question": "In this following code, what is the value of a[3][1]?",
+        "language": "C",
+        "answersArray": [
+            "{7, 8}",
+            "7",
+            "8",
+            "9"
+        ],
+        "correctAnswer": "8",
+        "code": "\nint a[5][2] = {{1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10}};\n"
+    },
+    {
+        "question": "What does this code print?",
+        "language": "C",
+        "answersArray": [
+            "1234",
+            "01234",
+            "4321",
+            "43210"
+        ],
+        "correctAnswer": "43210",
+        "code": "\nvoid print(int nb)\n{\n    if (nb < 0) \n    {\n        return;\n    }\n    printf(\"%d\", nb);\n    nb --;\n    print(nb);\n}\n\nint main(void)\n{\n    print(4);\n    return (0);\n}\n"
+    },
+    {
+        "question": "What does this code print?",
+        "language": "C",
+        "answersArray": [
+            "321",
+            "4321",
+            "3210",
+            "43210"
+        ],
+        "correctAnswer": "4321",
+        "code": "\nvoid print(int nb)\n{\n    printf(\"%d\", nb);\n    -- nb;\n    if (nb > 0) \n    {\n        print(nb);\n    }\n}\n\nint main(void)\n{\n    print(4);\n    return (0);\n}\n"
+    },
