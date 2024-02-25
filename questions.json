@@ -1460,3 +1460,37 @@
         "correctAnswer": "8 bytes",
         "code": "\nint **p;\n"
     },
+    {
+        "question": "What is the size of *p in this code?",
+        "language": "C",
+        "answersArray": [
+            "4 bytes",
+            "16 bytes",
+            "8 bytes"
+        ],
+        "correctAnswer": "4 bytes",
+        "code": "\nint *p;\n"
+    },
+    {
+        "question": "What is the size of p in this code?",
+        "language": "C",
+        "answersArray": [
+            "4 bytes",
+            "16 bytes",
+            "8 bytes"
+        ],
+        "correctAnswer": "8 bytes",
+        "code": "\nint *p;\n"
+    },
+    {
+        "question": "In this following code, what is the value of a[0][0]?",
+        "language": "C",
+        "answersArray": [
+            "3",
+            "1",
+            "4",
+            "2"
+        ],
+        "correctAnswer": "1",
+        "code": "\nint a[5][2] = {{1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10}};\n"
+    },
