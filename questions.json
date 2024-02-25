@@ -2189,3 +2189,79 @@
         "correctAnswer": "(*f)();",
         "code": ""
     },
+    {
+        "question": "What does a pointer to a function point to (check all correct answers if there is more than one)?",
+        "language": "C",
+        "answersArray": [
+            "The first character of the name of the function",
+            "data",
+            "The first byte of code of the function",
+            "code"
+        ],
+        "correctAnswer": "code",
+        "code": ""
+    },
+    {
+        "question": "In a singly linked list, what are possible directions to traverse it? (select all possible answers)",
+        "language": "C",
+        "answersArray": [
+            "Forward",
+            "Backward"
+        ],
+        "correctAnswer": "Forward",
+        "code": ""
+    },
+    {
+        "question": "What\u2019s the \u201chead\u201d of a linked list?",
+        "language": "C",
+        "answersArray": [
+            "It\u2019s the first node",
+            "It\u2019s the last node",
+            "It\u2019s the node with the pointer to the next equals to NULL",
+            "It\u2019s the node with the lowest value",
+            "It\u2019s the node with the highest value"
+        ],
+        "correctAnswer": "It\u2019s the first node",
+        "code": ""
+    },
+    {
+        "question": "What\u2019s a node? (select all possible answers)",
+        "language": "C",
+        "answersArray": [
+            "It\u2019s a cell in an array",
+            "It\u2019s a server",
+            "It\u2019s a space allocated in memory",
+            "It\u2019s an integer",
+            "It\u2019s a structure with a pointer to the next node and value information"
+        ],
+        "correctAnswer": "It\u2019s a structure with a pointer to the next node and value information",
+        "code": ""
+    },
+    {
+        "question": "What\u2019s the \u201ctail\u201d of a linked list?",
+        "language": "C",
+        "answersArray": [
+            "It\u2019s the node with the highest value",
+            "It\u2019s the node with the pointer to the next equals to NULL",
+            "It\u2019s the node with the lowest value",
+            "It\u2019s the first node"
+        ],
+        "correctAnswer": "It\u2019s the node with the pointer to the next equals to NULL",
+        "code": ""
+    },
+    {
+        "question": "Arrays Vs Linked Lists: select all true statements",
+        "language": "C",
+        "answersArray": [
+            "Memory is aligned for a Linked list - each elements are back to back in the memory",
+            "Linked list can contain as value a structure",
+            "We can easily remove an element from an Array",
+            "We can add elements indefinitely to a linked list",
+            "Memory is aligned for an Array - each elements are back to back in the memory",
+            "We can easily removed an element from a Linked list",
+            "Array can contain as value a structure",
+            "We can add elements indefinitely to an array"
+        ],
+        "correctAnswer": "Array can contain as value a structure",
+        "code": ""
+    },
