@@ -1341,5 +1341,16 @@
         ],
         "correctAnswer": "[1, 2, 3, 4]",
         "code": "\n>>> a = { 'id': 89, 'name': \"John\", 'projects': [1, 2, 3, 4] }\n>>> a.get('projects')\n"
-    }
-]
+    },
+    {
+        "question": "What is wrong with the following code?",
+        "language": "C",
+        "answersArray": [
+            "The array array is not entirely initialized",
+            "Nothing is wrong",
+            "It is not possible to access array[n]",
+            "It is impossible to declare the variable array this way"
+        ],
+        "correctAnswer": "It is not possible to access array[n]",
+        "code": "\nint n = 5;\nint array[5];\nint i = 3;\n\narray[n] = i;\n"
+    },
