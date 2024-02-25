@@ -1995,3 +1995,68 @@
         "correctAnswer": "True",
         "code": ""
     },
+    {
+        "question": "This code will try to allocate 1024 bytes in the heap:",
+        "language": "C",
+        "answersArray": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": "True",
+        "code": "\n#define BUFFER_SIZE 1024\nmalloc(BUFFER_SIZE)\n"
+    },
+    {
+        "question": "NULL is a macro",
+        "language": "C",
+        "answersArray": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": "True",
+        "code": ""
+    },
+    {
+        "question": "What does the macro TABLESIZE expand to?",
+        "language": "C",
+        "answersArray": [
+            "1020",
+            "nothing",
+            "37"
+        ],
+        "correctAnswer": "37",
+        "code": "\n#define BUFSIZE 1020\n#define TABLESIZE BUFSIZE\n#undef BUFSIZE\n#define BUFSIZE 37\n"
+    },
+    {
+        "question": "What are the steps of compilation?",
+        "language": "C",
+        "answersArray": [
+            "compiler 2. preprocessor 3. assembler 4. linker",
+            "compiler 2. preprocessor 3. assembler 4. linker",
+            "preprocessor 2.compiler 3. linker 4. assembler",
+            "preprocessor 2.compiler 3. linker 4. assembler",
+            "preprocessor 2.compiler 3. assembler 4. linker",
+            "preprocessor 2.compiler 3. assembler 4. linker"
+        ],
+        "correctAnswer": "preprocessor 2.compiler 3. assembler 4. linker",
+        "code": ""
+    },
+    {
+        "question": "The preprocessor generates object code",
+        "language": "C",
+        "answersArray": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": "False",
+        "code": ""
+    },
+    {
+        "question": "The preprocessor removes all comments",
+        "language": "C",
+        "answersArray": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": "True",
+        "code": ""
+    },
