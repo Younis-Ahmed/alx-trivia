@@ -1438,3 +1438,25 @@
         "correctAnswer": "7",
         "code": "\nint a[5][2] = {{1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10}};\n"
     },
+    {
+        "question": "What is stored inside a pointer to a pointer to an int?",
+        "language": "C",
+        "answersArray": [
+            "An address where an int is stored",
+            "An address where an address is stored",
+            "An int"
+        ],
+        "correctAnswer": "An address where an address is stored",
+        "code": ""
+    },
+    {
+        "question": "What is the size of p in this code?",
+        "language": "C",
+        "answersArray": [
+            "4 bytes",
+            "16 bytes",
+            "8 bytes"
+        ],
+        "correctAnswer": "8 bytes",
+        "code": "\nint **p;\n"
+    },
