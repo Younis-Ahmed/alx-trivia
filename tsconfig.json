@@ -109,9 +109,9 @@
   },
   "include": [
     "./**/*.ts",
-    "declare.d.ts"
   ],
   "exclude": [
     "node_modules",
+    "dist/**/*",
   ]
 }
