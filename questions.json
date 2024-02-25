@@ -1637,3 +1637,85 @@
         "correctAnswer": "nm",
         "code": ""
     },
+    {
+        "question": "What is argv[argc]?",
+        "language": "C",
+        "answersArray": [
+            "The first command line argument",
+            "NULL",
+            "The last command line argument",
+            "The program name",
+            "It does not always exist"
+        ],
+        "correctAnswer": "NULL",
+        "code": ""
+    },
+    {
+        "question": "What is argv?",
+        "language": "C",
+        "answersArray": [
+            "An array containing the program compilation flags",
+            "An array of size argc",
+            "An array containing the program command line arguments"
+        ],
+        "correctAnswer": "An array containing the program command line arguments",
+        "code": ""
+    },
+    {
+        "question": "What is argc?",
+        "language": "C",
+        "answersArray": [
+            "The size of the argv array",
+            "The number of command line arguments",
+            "The length of the first command line argument",
+            "A flag set to 1 when command line arguments are present"
+        ],
+        "correctAnswer": "The number of command line arguments",
+        "code": ""
+    },
+    {
+        "question": "What is argv[0]",
+        "language": "C",
+        "answersArray": [
+            "The first command line argument",
+            "NULL",
+            "The program name",
+            "It does not always exist"
+        ],
+        "correctAnswer": "The program name",
+        "code": ""
+    },
+    {
+        "question": "In the following command, what is argv[2]?",
+        "language": "C",
+        "answersArray": [
+            "NULL",
+            "My",
+            "is fun",
+            "My School is fun",
+            "My School",
+            "./argv",
+            "fun",
+            "is",
+            "School"
+        ],
+        "correctAnswer": "is fun",
+        "code": "\n$ ./argv \"My School\" \"is fun\"\n"
+    },
+    {
+        "question": "In the following command, what is argv[2]?",
+        "language": "C",
+        "answersArray": [
+            "NULL",
+            "My",
+            "is fun",
+            "My School is fun",
+            "My School",
+            "./argv",
+            "fun",
+            "is",
+            "School"
+        ],
+        "correctAnswer": "NULL",
+        "code": "\n$ ./argv \"My School is fun\"\n"
+    },
