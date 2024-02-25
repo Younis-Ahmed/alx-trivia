@@ -2450,3 +2450,261 @@
         "correctAnswer": "0b10001001",
         "code": ""
     },
+    {
+        "question": "0x89 & 0x01 = ?",
+        "language": "C",
+        "answersArray": [
+            "0x88",
+            "0x00",
+            "0x89",
+            "0x01"
+        ],
+        "correctAnswer": "0x01",
+        "code": ""
+    },
+    {
+        "question": "0x66 & 0x22 = ?",
+        "language": "C",
+        "answersArray": [
+            "0x22",
+            "0x66",
+            "0x44"
+        ],
+        "correctAnswer": "0x22",
+        "code": ""
+    },
+    {
+        "question": "What is 0b01101101 in base16?",
+        "language": "C",
+        "answersArray": [
+            "0x6E",
+            "0x36",
+            "0xD6",
+            "0x7D",
+            "0x6D"
+        ],
+        "correctAnswer": "0x6D",
+        "code": ""
+    },
+    {
+        "question": "~ 0x12 = ?",
+        "language": "C",
+        "answersArray": [
+            "0xEE",
+            "0xED",
+            "0x21",
+            "0xFD"
+        ],
+        "correctAnswer": "0xED",
+        "code": ""
+    },
+    {
+        "question": "What is the oflag used to open a file with the mode read only?",
+        "language": "C",
+        "answersArray": [
+            "O_WRONLY",
+            "O_RDWR",
+            "O_RDONLY"
+        ],
+        "correctAnswer": "O_RDONLY",
+        "code": ""
+    },
+    {
+        "question": "Without context, on Ubuntu 14.04 LTS, write is a \u2026 (please select all correct answers):",
+        "language": "C",
+        "answersArray": [
+            "library call",
+            "executable",
+            "kernel routine",
+            "game",
+            "system call"
+        ],
+        "correctAnswer": "system call",
+        "code": ""
+    },
+    {
+        "question": "why? #AlwaysAskWhy",
+        "language": "C",
+        "answersArray": [
+            "Because most of the time, I will already have stdin (value 0), stdout (value 1) and stderr (value 2) opened when my program starts executing.",
+            "Because this will be the first opened file descriptor and in CS we start counting starting from 0",
+            "Because this will be the second opened file descriptor for my process",
+            "I don\u2019t care I never ask why, just let me access the tasks!",
+            "Because this will be the third opened file descriptor for my process",
+            "Because this will be the first opened file descriptor and we start counting starting from 1"
+        ],
+        "correctAnswer": "Because most of the time, I will already have stdin (value 0), stdout (value 1) and stderr (value 2) opened when my program starts executing.",
+        "code": ""
+    },
+    {
+        "question": "What is the unistd symbolic constant for the standard output?",
+        "language": "C",
+        "answersArray": [
+            "STDIN_FILENO",
+            "STDERR_FILENO",
+            "STDOUT_FILENO"
+        ],
+        "correctAnswer": "STDOUT_FILENO",
+        "code": ""
+    },
+    {
+        "question": "When I am using O_WRONLY | O_CREAT | O_APPEND -> the | are bitwise operators.",
+        "language": "C",
+        "answersArray": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": "True",
+        "code": ""
+    },
+    {
+        "question": "What happens if you try to write \u201cBest\u201d to the standard input on Ubuntu 14.04 LTS? Just try it! :)",
+        "language": "C",
+        "answersArray": [
+            "The text will be printed on the terminal but I can\u2019t pipe it",
+            "Nothing",
+            "The text will be printed on the terminal on the standard output",
+            "Segmentation fault"
+        ],
+        "correctAnswer": "The text will be printed on the terminal on the standard output",
+        "code": ""
+    },
+    {
+        "question": "What is the return value of the system call open if it fails?",
+        "language": "C",
+        "answersArray": [
+            "0",
+            "98",
+            "-1"
+        ],
+        "correctAnswer": "-1",
+        "code": ""
+    },
+    {
+        "question": "What system call would you use to write to a file descriptor? (select all correct answers)",
+        "language": "C",
+        "answersArray": [
+            "printf",
+            "write",
+            "fprintf"
+        ],
+        "correctAnswer": "write",
+        "code": ""
+    },
+    {
+        "question": "Most of the time, on a classic, modern Linux system, what will be the value of the first file descriptor you will get after opening a new file with open (if open succeeds of course):",
+        "language": "C",
+        "answersArray": [
+            "5",
+            "2",
+            "4",
+            "0",
+            "6",
+            "3",
+            "1"
+        ],
+        "correctAnswer": "3",
+        "code": ""
+    },
+    {
+        "question": "What is the unistd symbolic constant for the standard input?",
+        "language": "C",
+        "answersArray": [
+            "STDIN_FILENO",
+            "STDERR_FILENO",
+            "STDOUT_FILENO"
+        ],
+        "correctAnswer": "STDIN_FILENO",
+        "code": ""
+    },
+    {
+        "question": "What is the unistd symbolic constant for the Standard error?",
+        "language": "C",
+        "answersArray": [
+            "STDIN_FILENO",
+            "STDERR_FILENO",
+            "STDOUT_FILENO"
+        ],
+        "correctAnswer": "STDERR_FILENO",
+        "code": ""
+    },
+    {
+        "question": "What is the correct combination of oflags used to open a file with the mode write only, create it if it doesn\u2019t exist and append new content at the end if it already exists?",
+        "language": "C",
+        "answersArray": [
+            "O_WRONLY | O_CREAT | O_APPEND",
+            "O_WRONLY",
+            "O_RDWR | O_CREAT | O_APPEND",
+            "O_WRONLY | O_CREAT | O_EXCL"
+        ],
+        "correctAnswer": "O_WRONLY | O_CREAT | O_APPEND",
+        "code": ""
+    },
+    {
+        "question": "is open a function or a system call? (select all valid answers)",
+        "language": "C",
+        "answersArray": [
+            "it\u2019s a library call",
+            "it\u2019s a function",
+            "it\u2019s a kernel routine",
+            "it\u2019s a function provided by the kernel",
+            "it\u2019s a system call"
+        ],
+        "correctAnswer": "it\u2019s a system call",
+        "code": ""
+    },
+    {
+        "question": "What is the oflag used to open a file in mode read + write?",
+        "language": "C",
+        "answersArray": [
+            "O_WRONLY",
+            "O_RDWR",
+            "O_RDONLY"
+        ],
+        "correctAnswer": "O_RDWR",
+        "code": ""
+    },
+    {
+        "question": "Which of these answers are the equivalent of O_RDWR on Ubuntu 14.04 LTS? (select all correct answers): Use printf or read the headers to see the definitions/values of these macros.",
+        "language": "C",
+        "answersArray": [
+            "O_RDONLY",
+            "1 << 1",
+            "(O_RDONLY & O_WRONLY)",
+            "(O_WRONLY << 1)",
+            "2",
+            "(O_RDONLY << 1)",
+            "(O_RDONLY && O_WRONLY)",
+            "(O_RDONLY + O_WRONLY)",
+            "0",
+            "O_WRONLY",
+            "3",
+            "3 & 2",
+            "3 | 2",
+            "(O_RDONLY | O_WRONLY)",
+            "1"
+        ],
+        "correctAnswer": "3 & 2",
+        "code": ""
+    },
+    {
+        "question": "In a doubly linked list, what\u2019s the \u201chead\u201d of a linked list?",
+        "language": "C",
+        "answersArray": [
+            "It\u2019s the node with the pointer to the next equals to NULL",
+            "It\u2019s the node with the pointer to the previous equals to NULL"
+        ],
+        "correctAnswer": "It\u2019s the node with the pointer to the previous equals to NULL",
+        "code": ""
+    },
+    {
+        "question": "In a doubly linked list, what are possible directions to traverse it? (select all possible answers)",
+        "language": "C",
+        "answersArray": [
+            "Forward",
+            "Backward"
+        ],
+        "correctAnswer": "Backward",
+        "code": ""
+    }
+]
