@@ -1719,3 +1719,66 @@
         "correctAnswer": "NULL",
         "code": "\n$ ./argv \"My School is fun\"\n"
     },
+    {
+        "question": "In the following command, what is argv[2]?",
+        "language": "C",
+        "answersArray": [
+            "NULL",
+            "My",
+            "is fun",
+            "My School is fun",
+            "My School",
+            "./argv",
+            "fun",
+            "is",
+            "School"
+        ],
+        "correctAnswer": "School",
+        "code": "\n$ ./argv My School is fun\n"
+    },
+    {
+        "question": "How many bytes will this statement allocate? malloc(sizeof(unsigned int) * 2)",
+        "language": "C",
+        "answersArray": [
+            "2",
+            "8",
+            "4"
+        ],
+        "correctAnswer": "8",
+        "code": ""
+    },
+    {
+        "question": "How many bytes will this statement allocate? malloc(sizeof(int) * 4)",
+        "language": "C",
+        "answersArray": [
+            "16",
+            "4",
+            "32",
+            "8"
+        ],
+        "correctAnswer": "16",
+        "code": ""
+    },
+    {
+        "question": "What is Valgrind?",
+        "language": "C",
+        "answersArray": [
+            "It\u2019s a new step when I compile with gcc",
+            "A container service",
+            "It\u2019s a program to test a C program in a specific environment",
+            "It\u2019s a program to validate memory allocation"
+        ],
+        "correctAnswer": "It\u2019s a program to validate memory allocation",
+        "code": ""
+    },
+    {
+        "question": "How many bytes will this statement allocate? malloc(sizeof(int) * 10)",
+        "language": "C",
+        "answersArray": [
+            "40",
+            "10",
+            "32"
+        ],
+        "correctAnswer": "40",
+        "code": ""
+    },
