@@ -2265,3 +2265,94 @@
         "correctAnswer": "Array can contain as value a structure",
         "code": ""
     },
+    {
+        "question": "0x01 | 0x00 = ?",
+        "language": "C",
+        "answersArray": [
+            "0x00",
+            "0x02",
+            "0x01"
+        ],
+        "correctAnswer": "0x01",
+        "code": ""
+    },
+    {
+        "question": "0x02 >> 1 = ?",
+        "language": "C",
+        "answersArray": [
+            "0x02",
+            "0x00",
+            "0x01"
+        ],
+        "correctAnswer": "0x01",
+        "code": ""
+    },
+    {
+        "question": "What is 0b001010010 in base10?",
+        "language": "C",
+        "answersArray": [
+            "83",
+            "81",
+            "84",
+            "82"
+        ],
+        "correctAnswer": "82",
+        "code": ""
+    },
+    {
+        "question": "0x13 << 1 = ?",
+        "language": "C",
+        "answersArray": [
+            "0x4C",
+            "0x13",
+            "0x98",
+            "0x26"
+        ],
+        "correctAnswer": "0x26",
+        "code": ""
+    },
+    {
+        "question": "0x01 | 0x01 = ?",
+        "language": "C",
+        "answersArray": [
+            "0x00",
+            "0x02",
+            "0x01"
+        ],
+        "correctAnswer": "0x01",
+        "code": ""
+    },
+    {
+        "question": "What is 98 in base16?",
+        "language": "C",
+        "answersArray": [
+            "0x62",
+            "0x96",
+            "0x98"
+        ],
+        "correctAnswer": "0x62",
+        "code": ""
+    },
+    {
+        "question": "What is 0x89 in base10?",
+        "language": "C",
+        "answersArray": [
+            "137",
+            "89",
+            "139",
+            "135"
+        ],
+        "correctAnswer": "137",
+        "code": ""
+    },
+    {
+        "question": "~ 0x98 = ?",
+        "language": "C",
+        "answersArray": [
+            "0x66",
+            "0x68",
+            "0x67"
+        ],
+        "correctAnswer": "0x67",
+        "code": ""
+    },
