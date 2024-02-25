@@ -1927,3 +1927,71 @@
         "correctAnswer": "There is no comment",
         "code": "\n\n\nint cp(void)\n{\n    char *s;\n\n    s = malloc(12);\n    strcpy(s, \"Best School\");\n    return (0);\n}\n"
     },
+    {
+        "question": "The preprocessor links our code with libraries.",
+        "language": "C",
+        "answersArray": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": "False",
+        "code": ""
+    },
+    {
+        "question": "What will be the last 5 lines of the output of the command gcc -E on this code?",
+        "language": "C",
+        "answersArray": [
+            "int main(void)\n{\n ((void *)0);\n return (0);\n}",
+            "int main(void)\n{\n 0;\n return (0);\n}",
+            "int main(void)\n{\n '\\0';\n return (0);\n}",
+            "int main()\n{\n 0;\n return (0);\n}"
+        ],
+        "correctAnswer": "int main(void)\n{\n ((void *)0);\n return (0);\n}",
+        "code": "\n#include <stdlib.h>\n\nint main(void)\n{\n    NULL;\n    return (EXIT_SUCCESS);\n}\n"
+    },
+    {
+        "question": "This is the correct way to define the macro SUB:",
+        "language": "C",
+        "answersArray": [
+            "No, it should be written this way:\n#define SUB(a, b) (a) - (b)",
+            "Yes",
+            "No, it should be written this way:\n#define SUB(a, b) ((a) - (b))",
+            "No, it should be written this way:\n#define SUB(a, b) (a - b)"
+        ],
+        "correctAnswer": "No, it should be written this way:\n#define SUB(a, b) ((a) - (b))",
+        "code": "\n#define SUB(a, b) a - b\n"
+    },
+    {
+        "question": "The preprocessor generates assembly code",
+        "language": "C",
+        "answersArray": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": "False",
+        "code": ""
+    },
+    {
+        "question": "What will be the output of this program? (on a standard 64 bits, Linux machine)",
+        "language": "C",
+        "answersArray": [
+            "sizeof(i) = 4",
+            "Segmentation Fault",
+            "sizeof(i) = 8",
+            "sizeof(i) = 1",
+            "sizeof(i) = 5",
+            "It does not compile"
+        ],
+        "correctAnswer": "sizeof(i) = 1",
+        "code": "\n#include <stdio.h>\n#include <stdlib.h>\n\n#define int char\n\nint main(void)\n{\n    int i;\n\n    i = 5;\n    printf (\"sizeof(i) = %lu\", sizeof(i));\n    return (EXIT_SUCCESS);\n}\n"
+    },
+    {
+        "question": "The macro __FILE__ expands to the name of the current input file, in the form of a C string constant.",
+        "language": "C",
+        "answersArray": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": "True",
+        "code": ""
+    },
