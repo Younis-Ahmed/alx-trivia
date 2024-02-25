@@ -1588,3 +1588,52 @@
         "correctAnswer": "00246",
         "code": "\nint print(int nb)\n{\n    if (nb < 0) \n    {\n        return (0);\n    }\n    printf(\"%d\", nb + print(nb - 1));\n    nb --;\n    return (nb);\n}\n\nint main(void)\n{\n    print(4);\n    return (0);\n}\n"
     },
+    {
+        "question": "What is the format of a static library?",
+        "language": "C",
+        "answersArray": [
+            "A shared ELF file",
+            "A relocatable ELF file",
+            "An archive",
+            "An executable ELF file"
+        ],
+        "correctAnswer": "An archive",
+        "code": ""
+    },
+    {
+        "question": "What is the point of using ranlib?",
+        "language": "C",
+        "answersArray": [
+            "Create a library from a simple archive",
+            "Creating an archive",
+            "List the content of a library",
+            "Indexing an archive"
+        ],
+        "correctAnswer": "Indexing an archive",
+        "code": ""
+    },
+    {
+        "question": "What command is used to create a static library from object files?",
+        "language": "C",
+        "answersArray": [
+            "ranlib",
+            "gcc",
+            "nm",
+            "ar",
+            "ld"
+        ],
+        "correctAnswer": "ar",
+        "code": ""
+    },
+    {
+        "question": "What command(s) can be used to list the symbols stored in a static library?",
+        "language": "C",
+        "answersArray": [
+            "ar",
+            "nm",
+            "ld",
+            "ranlib"
+        ],
+        "correctAnswer": "nm",
+        "code": ""
+    },
