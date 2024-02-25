@@ -1553,3 +1553,38 @@
         "correctAnswer": "4321",
         "code": "\nvoid print(int nb)\n{\n    printf(\"%d\", nb);\n    -- nb;\n    if (nb > 0) \n    {\n        print(nb);\n    }\n}\n\nint main(void)\n{\n    print(4);\n    return (0);\n}\n"
     },
+    {
+        "question": "What does this code print?",
+        "language": "C",
+        "answersArray": [
+            "21",
+            "012",
+            "210",
+            "12"
+        ],
+        "correctAnswer": "21",
+        "code": "\nvoid print(int nb)\n{\n    printf(\"%d\", nb);\n    nb --;\n    if (nb > 0) \n    {\n        print(nb);\n    }\n}\n\nint main(void)\n{\n    print(2);\n    return (0);\n}\n"
+    },
+    {
+        "question": "What does this code print?",
+        "language": "C",
+        "answersArray": [
+            "345678910",
+            "987654",
+            "456789",
+            "109876543"
+        ],
+        "correctAnswer": "456789",
+        "code": "\nvoid print(int nb)\n{\n    printf(\"%d\", nb);\n    nb ++;\n    if (nb < 10) \n    {\n        print(nb);\n    }\n}\n\nint main(void)\n{\n    print(4);\n    return (0);\n}\n"
+    },
+    {
+        "question": "What does this code print?",
+        "language": "C",
+        "answersArray": [
+            "64200",
+            "01234568",
+            "00246"
+        ],
+        "correctAnswer": "00246",
+        "code": "\nint print(int nb)\n{\n    if (nb < 0) \n    {\n        return (0);\n    }\n    printf(\"%d\", nb + print(nb - 1));\n    nb --;\n    return (nb);\n}\n\nint main(void)\n{\n    print(4);\n    return (0);\n}\n"
+    },
