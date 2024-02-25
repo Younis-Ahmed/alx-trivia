@@ -1828,3 +1828,60 @@
         "correctAnswer": "True",
         "code": ""
     },
+    {
+        "question": "The memory space reserved when calling malloc is on:",
+        "language": "C",
+        "answersArray": [
+            "The stack",
+            "The heap"
+        ],
+        "correctAnswer": "The heap",
+        "code": ""
+    },
+    {
+        "question": "If I want to copy the string \u201cBest School\u201d into a new space in memory, I can use this statement to reserve enough space for it (select all valid answers):",
+        "language": "C",
+        "answersArray": [
+            "malloc(sizeof(\u201cBest School\u201d) + 1)",
+            "malloc(sizeof(\u201cBest School\u201d))",
+            "malloc(11)",
+            "malloc(strlen(\u201cBest School\u201d) + 1)",
+            "malloc(12)",
+            "malloc(strlen(\u201cBest School\u201d))"
+        ],
+        "correctAnswer": "malloc(12)",
+        "code": ""
+    },
+    {
+        "question": "What will you see on the terminal?",
+        "language": "C",
+        "answersArray": [
+            "It doesn\u2019t compile",
+            "0",
+            "Segmentation Fault",
+            "98"
+        ],
+        "correctAnswer": "Segmentation Fault",
+        "code": "\nint main(void)\n{\n    int *ptr;\n\n    *ptr = 98;\n    printf(\"%d\\n\", *ptr);\n    return (0);\n}\n"
+    },
+    {
+        "question": "You can do this:",
+        "language": "C",
+        "answersArray": [
+            "Yes",
+            "No"
+        ],
+        "correctAnswer": "Yes",
+        "code": "\nchar *s;\n\ns = strdup(\"Best School\");\nif (s != NULL)\n{\n    free(s);\n}\n"
+    },
+    {
+        "question": "To allocate enough space for an array of 10 integers (on a 64bit, Linux machine), I can use:",
+        "language": "C",
+        "answersArray": [
+            "malloc(64 * 10)",
+            "malloc(10 * sizeof(int))",
+            "malloc(10 * int)"
+        ],
+        "correctAnswer": "malloc(10 * sizeof(int))",
+        "code": ""
+    },
