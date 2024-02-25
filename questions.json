@@ -1389,3 +1389,52 @@
         "correctAnswer": "It is impossible to declare the variable array this way",
         "code": "\nint n = 5;\nint array[n];\nint i = 3;\n\narray[n] = i;\n"
     },
+    {
+        "question": "What is/are the difference(s) between the two following variables? (Except their names)",
+        "language": "C",
+        "answersArray": [
+            "The first one points to 0, the second one points to a 0-byte",
+            "They are the same",
+            "The second one can be dereferenced, not the first one",
+            "The first one can be dereferenced, not the second one",
+            "The first one points to a 0-byte, the second one points to 0"
+        ],
+        "correctAnswer": "The first one points to a 0-byte, the second one points to 0",
+        "code": "\nchar *s1 = \"\";\nchar *s2 = NULL;\n"
+    },
+    {
+        "question": "What happens when one tries to dereference a pointer to NULL?",
+        "language": "C",
+        "answersArray": [
+            "Kernel panic",
+            "Nothing",
+            "World War Z",
+            "Segmentation fault"
+        ],
+        "correctAnswer": "Segmentation fault",
+        "code": ""
+    },
+    {
+        "question": "Why is it important to reserve enough space for an extra character when declaring/allocating a string?",
+        "language": "C",
+        "answersArray": [
+            "For the null byte (end of string)",
+            "In case we need one",
+            "For fun",
+            "For memory alignment"
+        ],
+        "correctAnswer": "For the null byte (end of string)",
+        "code": ""
+    },
+    {
+        "question": "In this following code, what is the value of a[3][0]?",
+        "language": "C",
+        "answersArray": [
+            "{7, 8}",
+            "7",
+            "5",
+            "8"
+        ],
+        "correctAnswer": "7",
+        "code": "\nint a[5][2] = {{1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10}};\n"
+    },
