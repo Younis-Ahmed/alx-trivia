@@ -2060,3 +2060,73 @@
         "correctAnswer": "True",
         "code": ""
     },
+    {
+        "question": "What is the gcc option that runs only the preprocessor?",
+        "language": "C",
+        "answersArray": [
+            "-cisfun",
+            "-p",
+            "-E",
+            "-a",
+            "-preprocessor",
+            "-pedantic",
+            "-P"
+        ],
+        "correctAnswer": "-E",
+        "code": ""
+    },
+    {
+        "question": "This portion of code is actually using the library stdlib.",
+        "language": "C",
+        "answersArray": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": "False",
+        "code": "\n#include <stdlib.h>\n"
+    },
+    {
+        "question": "Why should we use include guards in our header files?",
+        "language": "C",
+        "answersArray": [
+            "Because we said so, and we should never ask why.",
+            "To avoid the problem of double inclusion when dealing with the include directive."
+        ],
+        "correctAnswer": "To avoid the problem of double inclusion when dealing with the include directive.",
+        "code": ""
+    },
+    {
+        "question": "Given this code: To set the member y of my variable my_point to 98, I can do (select all valid answers):",
+        "language": "C",
+        "answersArray": [
+            "p.y = 98;",
+            "my_point.y = 98;",
+            "p->y = 98;",
+            "(*p).y = 98;",
+            "my_point->y = 98;"
+        ],
+        "correctAnswer": "(*p).y = 98;",
+        "code": "\nstruct point {\n   int x;\n   int y;\n};\nstruct point my_point = { 3, 7 };\nstruct point *p = &my_point;\n"
+    },
+    {
+        "question": "The general syntax for a struct declaration in C is:",
+        "language": "C",
+        "answersArray": [
+            "True",
+            "Maybe",
+            "False"
+        ],
+        "correctAnswer": "True",
+        "code": "\nstruct tag_name {\n   type member1;\n   type member2;\n   /* declare as many members as desired, but the entire structure size must be known to the compiler. */\n};\n"
+    },
+    {
+        "question": "You should write documentation for all the structures you create",
+        "language": "C",
+        "answersArray": [
+            "True",
+            "As soon as I write my structure.",
+            "I\u2019ll do it 5 minutes before the deadline when I try Betty on my header file"
+        ],
+        "correctAnswer": "As soon as I write my structure.",
+        "code": ""
+    },
