@@ -1,5 +1,25 @@
 # @younis-ahmed/alx-trivia
 
+## 0.4.2
+
+### Patch Changes
+
+- | **ID**  | **Language** | **Type** |
+  | ------- | ------------ | -------- |
+  | ~~220~~ | `C   `       | project  |
+  | ~~221~~ | `C     `     | project  |
+  | ~~222~~ | `C   `       | project  |
+  | ~~223~~ | `C   `       | project  |
+  | ~~224~~ | `C       `   | project  |
+  | ~~225~~ | `C       `   | project  |
+  | ~~226~~ | `C       `   | project  |
+  | ~~228~~ | `C      `    | project  |
+  | ~~229~~ | `C  `        | project  |
+  | ~~232~~ | `C  `        | project  |
+  | ~~234~~ | `C  `        | project  |
+  | ~~240~~ | `C  `        | project  |
+  | ~~242~~ | `C   `       | project  |
+
 ## 0.4.1
 
 ### Patch Changes
