@@ -1782,3 +1782,49 @@
         "correctAnswer": "40",
         "code": ""
     },
+    {
+        "question": "How many bytes will this statement allocate? malloc(10)",
+        "language": "C",
+        "answersArray": [
+            "4",
+            "2",
+            "40",
+            "10"
+        ],
+        "correctAnswer": "10",
+        "code": ""
+    },
+    {
+        "question": "How many bytes will this statement allocate? malloc((sizeof(char) * 10) + 1)",
+        "language": "C",
+        "answersArray": [
+            "21",
+            "1",
+            "11",
+            "20",
+            "10"
+        ],
+        "correctAnswer": "11",
+        "code": ""
+    },
+    {
+        "question": "How many bytes will this statement allocate? malloc(sizeof(char) * 10)",
+        "language": "C",
+        "answersArray": [
+            "10",
+            "40",
+            "20"
+        ],
+        "correctAnswer": "10",
+        "code": ""
+    },
+    {
+        "question": "malloc returns an address",
+        "language": "C",
+        "answersArray": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": "True",
+        "code": ""
+    },
