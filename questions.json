@@ -2130,3 +2130,62 @@
         "correctAnswer": "As soon as I write my structure.",
         "code": ""
     },
+    {
+        "question": "Those two codes do the same thing:",
+        "language": "C",
+        "answersArray": [
+            "True",
+            "False: the members of the structures will not have the same values",
+            "False: the second does not compile"
+        ],
+        "correctAnswer": "True",
+        "code": "\ntypedef struct point point;\nstruct point {\n   int    x;\n   int    y;\n};\npoint p = {1, 2};\n"
+    },
+    {
+        "question": "This void (*anjula[])(int, float) is:",
+        "language": "C",
+        "answersArray": [
+            "A pointer to a function that takes an int and a float as parameters and returns an empty array",
+            "A pointer to a function that takes an int and a float as parameters and returns nothing",
+            "A pointer to an array of functions that take an int and a float as parameters and returns nothing",
+            "An array of pointers to functions that take an int and a float as parameters and returns nothing",
+            "A pointer to a function that takes an array of int and float as a parameter and returns nothing"
+        ],
+        "correctAnswer": "An array of pointers to functions that take an int and a float as parameters and returns nothing",
+        "code": ""
+    },
+    {
+        "question": "To store the address of this function: to the variable f of type pointer to a function that does not take any argument and does not return anything, you would do (check all correct answers if there is more than one):",
+        "language": "C",
+        "answersArray": [
+            "*f = neyo;",
+            "f = neyo;",
+            "*f = &neyo;",
+            "f = &neyo;"
+        ],
+        "correctAnswer": "f = &neyo;",
+        "code": "\nvoid neyo(void);\n"
+    },
+    {
+        "question": "Which one is a pointer to a function?",
+        "language": "C",
+        "answersArray": [
+            "int (*func)(int a, float b);",
+            "int func(int a, float b);",
+            "(int *)func(int a, float b);",
+            "int *func(int a, float b);"
+        ],
+        "correctAnswer": "int (*func)(int a, float b);",
+        "code": ""
+    },
+    {
+        "question": "If f is a pointer to a function that takes no parameter and returns an int, you can call the function pointed by f this way (check all correct answers if there is more than one):",
+        "language": "C",
+        "answersArray": [
+            "f();",
+            "f;",
+            "(*f)();"
+        ],
+        "correctAnswer": "(*f)();",
+        "code": ""
+    },
